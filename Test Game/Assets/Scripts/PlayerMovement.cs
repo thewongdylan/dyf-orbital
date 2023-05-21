@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         dirX = Input.GetAxis("Horizontal"); // Change GetAxis to GetAxisRaw if we don't want sliding after horizontal movement
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() )
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
