@@ -10,6 +10,7 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cherriesCounter;
     [SerializeField] private Orb orb;
 
+    [SerializeField] private PlayerLife playerLife;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Cherry"))

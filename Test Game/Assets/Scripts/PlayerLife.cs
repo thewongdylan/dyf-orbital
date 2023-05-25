@@ -40,6 +40,22 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
+            TakeDamage(1);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
+
+        if (currentHealth > 0)
+        {
+            // player dies, loses a life
+            LoseLife();
+        } 
+        else 
+        {
+            // game over
             Die();
         }
     }
