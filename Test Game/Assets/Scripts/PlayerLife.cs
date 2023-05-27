@@ -7,6 +7,8 @@ public class PlayerLife : MonoBehaviour
 {   
     private Rigidbody2D rb;
     private Animator anim;
+    [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
 
     // Start is called before the first frame update
     private void Start()
@@ -15,12 +17,37 @@ public class PlayerLife : MonoBehaviour
         anim = GetComponent<Animator>();
     } 
 
+    private void Awake()
+    {
+        currentHealth = startingHealth;
+    } 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Trap"))
+        if (collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(1);
+        }
+    }
+
+    private void TakeDamage(float damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
+
+        if (currentHealth > 0)
+        {
+            LoseLife();
+        }
+        else
         {
             Die();
         }
+    }
+
+    private void LoseLife()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+        anim.SetTrigger("loseLife");
     }
 
     private void Die()
@@ -31,6 +58,13 @@ public class PlayerLife : MonoBehaviour
 
     private void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // reloads current scene
+        transform.position = new Vector3(-3.5f, 0, 0);
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        anim.SetInteger("state", 0);
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene("Game Over Screen");
     }
 }

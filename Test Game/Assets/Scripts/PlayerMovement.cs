@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     [SerializeField] private LayerMask jumpableGround;
+    // [SerializeField] private GameObject playerPos;
 
     private float dirX;
     [SerializeField] private float moveSpeed = 7f;
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         UpdateAnimationState();
+        // UpdatePosition();
     }
 
     private void UpdateAnimationState()
@@ -78,4 +80,9 @@ public class PlayerMovement : MonoBehaviour
         // This allows jumping when overlapping downwards with the jumpableGround but NOT sideways overlap with other objects
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
+
+    // private void UpdatePosition()
+    // {
+    //     playerPos.transform.position = transform.position;
+    // }
 }
