@@ -50,15 +50,19 @@ public class EnemyLife : MonoBehaviour
     {
         Debug.Log("enemy loses HP");
         // rb.bodyType = RigidbodyType2D.Static;
-        // anim.SetTrigger("death");
-        //anim.SetInteger("state", 1); // lose HP animation
-        // anim.SetInteger("state", 0); // back to idle animation
+        anim.SetInteger("state", 1); // lose HP animation
+    }
+
+    private void IdleAnimation()
+    {
+        anim.SetInteger("state", 0);
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     private void Die()
     {
         Debug.Log("enemy dies");
         // rb.bodyType = RigidbodyType2D.Static;
-        // anim.SetTrigger("death");
+        anim.SetTrigger("death");
     }
 }
