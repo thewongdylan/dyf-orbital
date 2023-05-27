@@ -29,7 +29,6 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             orb.Spawn();
-            
         }
     }
 }

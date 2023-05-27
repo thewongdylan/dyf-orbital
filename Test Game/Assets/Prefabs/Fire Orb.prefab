@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4467940730234806162}
   - component: {fileID: 4467940730234806163}
   - component: {fileID: 4467940730234806252}
-  - component: {fileID: 6323753023582363582}
   - component: {fileID: 4467940730234806161}
   m_Layer: 0
   m_Name: Fire Orb
@@ -113,22 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3717823, y: 0.3717823}
   m_EdgeRadius: 0
---- !u!114 &6323753023582363582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4467940730234806253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51945a237089d452e8218c03975f15e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orbOffsetX: 0
-  orbOffsetY: 0
-  fireOrb: {fileID: 4467940730234806253}
-  shotPoint: {fileID: 2653521809227268698, guid: 3a8c8159c30984bafafbbda46acd69af, type: 3}
 --- !u!114 &4467940730234806161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,10 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a9d8403f8e64450a7ddc3ef9e35859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   distance: 1
   damage: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  orb: {fileID: 6323753023582363582}
+  orb: {fileID: 0}
