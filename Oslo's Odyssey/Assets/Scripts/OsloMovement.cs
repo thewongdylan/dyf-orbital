@@ -48,12 +48,12 @@ public class OsloMovement : MonoBehaviour
         if (dirX > 0f)
         {
             state = MovementState.running;
-            sprite.flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (dirX < 0f)
         {
             state = MovementState.running; 
-            sprite.flipX = true;
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else 
         {
@@ -79,4 +79,5 @@ public class OsloMovement : MonoBehaviour
         // This allows jumping when overlapping downwards with the jumpableGround but NOT sideways overlap with other objects
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
+    
 }
