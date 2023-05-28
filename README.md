@@ -1,3 +1,4 @@
+
 # Oslo's Odyssey
 Welcome to our game development log/README.
 
@@ -6,7 +7,9 @@ README
 * Level of Achievement
 * Motivation
 * Game Ideation
-* 
+* Tech Stack
+* Milestone 1
+* Timeline
 
 
 
@@ -52,8 +55,23 @@ Orbs grant Oslo his power and are meant to contrast Oslo with flashy visuals and
 
 
 ## Timeline
+**Milestone 1**
+
+|Date| Features|
+|----|------------|
+|14 May - 27 May| Basic game design and prototyping|
+|27 May - 29 May| Implementing Oslo's movement and Fireball|
 
 
 
 
 
+
+# Gameplay
+## story
+The story starts in NoWay, Oslo's hometown. Oslo is part of a long running lineage of monks in NoWay who maintains the balance of the world. Right before Oslo is about to succeed his father as head monk, portals spawned all over the world, causing monsters to be unleashed across the worlds! Oslo must travel the world to acquire the elemental orbs that are essential to the balance of the world and use them to seal the portals once and for all.
+
+## Abilities
+Oslo harnesses the power of the elemental orbs for combat with his enemy. He starts off with the Air orb he claims from the monastery and gains Air-related powers such as double jump and air strike (a normal melee attack).
+
+As he clears enemies and gains access to other elements, Oslo gains other abilities such as elemental missiles. Previous abilities such as air strike could be imbued with new elements for new and different effects. 
