@@ -81,3 +81,18 @@ The story starts in NoWay, Oslo's hometown. Oslo is part of a long running linea
 Oslo harnesses the power of the elemental orbs for combat with his enemy. He starts off with the Air orb he claims from the monastery and gains Air-related powers such as double jump and air strike (a normal melee attack).
 
 As he clears enemies and gains access to other elements, Oslo gains other abilities such as elemental missiles. Previous abilities such as air strike could be imbued with new elements for new and different effects. (Work in progress)
+
+## Mechanics (MS2 and MS3)
+(work in progress)
+We intend to make Oslo's abilities interactive with his environment. 
+
+**Fire**: Fireball could be used to break blocks of wall to progress through the game.
+![Metroid Dread breakable blocks guide - what every block type means - Gamepur](https://www.gamepur.com/wp-content/uploads/2021/10/15001820/hanubia.jpg)
+*similar to Metroid Dread's breakable blocks which requires abilities to break*
+
+**Air**: Float ability allows Oslo to raise certain blocks of terrain, allowing him to traverse upwards on top of these blocks
+
+**Earth**: Raise an Earth wall from the ground to block projectiles and enemies from bypassing
+
+**Water**: Ability to surf on water bodies for a short time
+
