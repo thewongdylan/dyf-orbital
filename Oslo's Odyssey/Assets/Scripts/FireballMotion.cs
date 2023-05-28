@@ -31,15 +31,6 @@ public class FireballMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, enemyLayer);
-        // if (hitInfo.collider != null) {
-        //     if (hitInfo.collider.CompareTag("Enemy")) {
-        //         hitInfo.collider.GetComponent<EnemyLife>().TakeDamage(damage);
-        //     }
-        //     DestroyProjectile();
-        //     orb.Spawn();
-        // }
-
         transform.Translate(dirMovement * speed * Time.deltaTime); 
         if (dirMovement.x > 0f)
         {
@@ -48,6 +39,19 @@ public class FireballMotion : MonoBehaviour
         else if (dirMovement.x < 0f)
         {
             transform.localScale = new Vector3(-1,1,1);
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject != null)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.gameObject.GetComponent<EnemyLife>().TakeDamage(damage);
+            }
+            DestroyProjectile();
         }
     }
 

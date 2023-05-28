@@ -6,7 +6,7 @@ public class EnemyLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    [SerializeField] private float startingHealth;
+    public float startingHealth;
     public float currentHealth { get; private set; }
     [SerializeField] private float damage;
 
@@ -26,7 +26,6 @@ public class EnemyLife : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("player took damage");
             collision.gameObject.GetComponent<OsloLife>().TakeDamage(damage);
         }
     }
@@ -49,16 +48,19 @@ public class EnemyLife : MonoBehaviour
 
     private void Hit()
     {
-        Debug.Log("enemy takes a hit");
-        // rb.bodyType = RigidbodyType2D.Static;
+        Debug.Log("Enemy takes a hit, current health remaining: " + currentHealth);
         anim.SetTrigger("hit"); // hit animation
     }
 
     private void Die()
     {
-        Debug.Log("enemy dies");
-        // rb.bodyType = RigidbodyType2D.Static;
+        Debug.Log("Enemy dies");
+        transform.GetComponent<WaypointFollower>().SetMotion(false); // Only works if the enemy also has a WaypointFollower script attached
         anim.SetTrigger("death"); // death animation
+    }
+
+    private void DestroyEnemy()
+    {
         Destroy(transform.gameObject);
     }
 }
