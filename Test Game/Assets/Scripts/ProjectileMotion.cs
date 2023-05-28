@@ -11,18 +11,42 @@ public class ProjectileMotion : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private Orb orb;
 
+    private Animator anim;
+    private SpriteRenderer sprite;
+    private Rigidbody2D rb;
+    private float dirX;
+    private int state;
+
     // public GameObject destroyEffect;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
-       RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, enemyLayer);
+        
+        // if (rb.velocity.x > 0f)
+        // {
+        //     Debug.Log("flight animation");
+        //     anim.SetTrigger("inFlight");
+        //     sprite.flipX = false;
+        // }
+        // else if (rb.velocity.x < 0f)
+        // {
+        //     Debug.Log("flight animation");
+        //     anim.SetTrigger("inFlight");
+        //     sprite.flipX = true;
+        // }
+
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, enemyLayer);
         if (hitInfo.collider != null) {
             if (hitInfo.collider.CompareTag("Enemy")) {
                 hitInfo.collider.GetComponent<EnemyLife>().TakeDamage(damage);

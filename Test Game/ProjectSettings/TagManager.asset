@@ -4,14 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cherry
-  - Trap
-<<<<<<< Updated upstream
-=======
   - Enemy
-  - Projectile
   - Orb
->>>>>>> Stashed changes
+  - Trap
+  - Cherry
   layers:
   - Default
   - TransparentFX
@@ -21,7 +17,7 @@ TagManager:
   - UI
   - Ground
   - Enemy
-  - 
+  - Background
   - 
   - 
   - 
@@ -47,11 +43,11 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 1536216097
+    uniqueID: 173867835
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Terrain
-    uniqueID: 1947795923
+    uniqueID: 3837272113
     locked: 0

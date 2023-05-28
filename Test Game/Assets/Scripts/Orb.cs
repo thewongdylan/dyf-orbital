@@ -10,6 +10,7 @@ public class Orb : MonoBehaviour
     [SerializeField] private float orbOffsetY;    
     [SerializeField] private GameObject fireOrb;
     [SerializeField] private Transform shotPoint;
+    [SerializeField] private Transform orbPos;
 
 
     // Start is called before the first frame update
@@ -24,14 +25,14 @@ public class Orb : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            
+
             Fire();       
         }
     }
 
     public void Spawn()
     {
-        GameObject spawnedOrb = Instantiate(fireOrb, orbPosCoords, transform.rotation);
+        GameObject spawnedOrb = Instantiate(fireOrb, orbPos.position, transform.rotation);
         spawnedOrb.gameObject.transform.SetParent(transform); 
     }
 
