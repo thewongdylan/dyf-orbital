@@ -30,19 +30,6 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    private void TakeDamage(float damage)
-    {
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
-
-        if (currentHealth > 0)
-        {
-            LoseLife();
-        }
-        else
-        {
-            TakeDamage(1);
-        }
-    }
 
     public void TakeDamage(float damage)
     {
