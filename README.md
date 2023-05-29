@@ -65,8 +65,6 @@ Screens have been implemented to allow players to navigate through the game.
 - Game Over Screen: When the player dies
 - End Screen: When the player finishes the game
 
-There are also mockups of certain monster designs 
-
 ## Timeline
 **Milestone 1**
 
