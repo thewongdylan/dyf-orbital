@@ -7,7 +7,7 @@ public class OsloLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    [SerializeField] private float startingHealth;
+    public float startingHealth;
     public float currentHealth { get; private set; }
 
     // Start is called before the first frame update
@@ -37,26 +37,26 @@ public class OsloLife : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            // enemy takes a hit, loses HP
+            // oslo takes a hit, loses HP
             Hit();
         } 
         else 
         {
-            // enemy dies
+            // oslo dies
             Die();
         }
     }
 
     private void Hit()
     {
-        Debug.Log("oslo takes a hit");
+        Debug.Log("Oslo takes a hit, current health remaining: " + currentHealth);
         // rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("hit"); // hit animation
     }
 
     private void Die()
     {
-        Debug.Log("oslo dies");
+        Debug.Log("Oslo dies");
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death"); // death animation
         // Destroy(transform.gameObject);

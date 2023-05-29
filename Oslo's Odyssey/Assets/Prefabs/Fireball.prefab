@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8430486792365984672}
   - component: {fileID: 8430486792365984675}
   - component: {fileID: 8430486792365984674}
+  - component: {fileID: 2000830095814163102}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -119,10 +120,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f0c469c38894e0687bb751e93bf860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  distance: 0
-  damage: 0
+  speed: 5
+  distance: 1
+  damage: 1
   lifetime: 1
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+--- !u!61 &2000830095814163102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8430486792365984677}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0019593239}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.0029297}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3808403, y: 0.37985086}
+  m_EdgeRadius: 0
