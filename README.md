@@ -11,6 +11,7 @@ README
 * Milestone 1
 * Timeline
 * Gameplay
+* DevLog
 
 
 
@@ -95,4 +96,25 @@ We intend to make Oslo's abilities interactive with his environment.
 **Earth**: Raise an Earth wall from the ground to block projectiles and enemies from bypassing
 
 **Water**: Ability to surf on water bodies for a short time
+
+
+## DevLog
+
+
+|      Events  | Dylan (hours)  | Yih Fei (hours)          |
+|----------------|-------------------------------|-----------------------------|
+|*Design*| 
+|Learning of Pixel Art            |1  |     7     |
+|Character Design and Animation        |     2       |15       |
+|Environment Design        |3|1|
+|*Scripting*|
+|Learning Unity, C# and Git| 15| 10|
+|**player** movement, health and attack | 25| 2|
+|**Enemy** movement and health|10|0|
+|**Scenes** start and end scenes | 10 | 0|
+|*Others*|
+|Creating poster and video for milestone 1| 5 | 4|
+|Meetups to brainstorm <br /> **mechanics** <br /> **story** <br />**gameplay**  | 10 | 10|
+
+
 
