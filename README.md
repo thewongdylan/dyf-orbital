@@ -58,7 +58,12 @@ We have created a basic prototype game which includes Oslo basic movement and an
 ![](https://lh3.googleusercontent.com/pw/AJFCJaU5CBkV80owJzhw2fa8v8CU5JE2LZFIyu8-00OEAW2D1tjbMhgk1mOWdE6Q3T-gKBM5PP39LV_CY-CyO0Pee0_o2UVGJPZuzC9dWIBAGY7Kgdn9ZVrxZdlMhs3N9YS1m-aXHwUAPSOQRMRkBkSA4DUszgFBQwg-3I4_dASQHljrBAhtdnxSp2mcoZj4oYFJ2VVR-WtIHhFW6bKSEQBaO0xQ29qyw04ZHDVRBY-IuCdJCDYbYLImLJidfLn1dFQt3d4vz38TIbtH_eLmbqZJOgks_HEJm3ni3aWDxbW-w34suQ9UScO1bvuv7RQbwI6hc599H-p7E5Ik3PAUzhdZAJlwN0MAck6n5hmr4nXLSw8dRxQOIzGlcqNFaegDw9zWFIUdjnpVI8wdJHaD5LDitv3Kbzw2-E9veZIHiFs4vhzzBvr9mAELNvMgd4VqRN87ISOyp1YDkW9MBgtZRbcB3HwbBzh-B9hggb-KHVaCXgG3PDguMeKkNHtuqcag_U3ubTHSuETtHP4zBRPzbmBaVuN1BHURhp2Hp8fAydj9sLXJBPMo4FwGtV-kiYmr7dGnZdosxiSnkscAV4n0P10SSPBOjraMEwRH0dU-ZhOXHKBe0HLu8Lmlmav7pJY8iHMB8-ch_CRFVhiEKEyjQV_xuHX0WvsmFejP-G8RqJk7J17OUt_9qjR5zFnL2N2djPXLU3bDUUyxWI1Xb5Mmet4XFmX1CeYm3hwIYE0fzjQUkkBRPiINFv_KcBaq8XgcLo7cDryTJmPhlnY-pUiDHLZXAGHV6KSohJEXrFKemOs564L8M-pg0e8vxNgzXLdmdSNCubdccPkAnNNp0gqxls2rzYhuLIXi8RvstPBYw7UqhvEqK8JvQh_r3bTGbLXcVJ4GlroYee4vccuL87GN3LKrs5g=w1744-h948-s-no?authuser=0)
 ![](https://lh3.googleusercontent.com/pw/AJFCJaUK_ydjfMitN-bKzFi5u-Y_piZZvjdTFdhaxRPlZ4mPjwI7r_KkHlBDe4Yugap17ceacm948rpi_wDRmSFPmJkVJSUfWkyvw5j-lxrekqXOUWB0KTo-BJ_Qt_79nPwk-CZm1cX1PbwH2bjpKaJDF_1xiVVqvFTzgGVm2lkVoxgGY8TBUhRVLWzSf0INqXhK8DsXeErvxVTUGLBmqviCsopFDrtwo4LFKQctdvajw6MSxJDE9zSDM4EhIch9M5fmW2IvrOZg7MhuowP-HS3Ve0Vw7hdi_mJiZ5nPCCvas3tZ_xoeQJY_NFzYOihYsGSmtOCMs5gL8Cap0kXAVkmj40cBFVCG7aOsz3G4tqyBEXo94WvHWXiW3TDWmAdcIX-xRn7sS_FWiPbUeeITNX6yhnI2LsiD1zKe9nvuAbfvZC0pzJk7ZnO-O0JUrpZAuhnrlQ_kAbN6TqW8MaTuMvl_r_H95a9LLE7LTUHPrFT003DpAVnsmYb5UlOGbygkV4tKVf-WPlwY2K9M1Ng6XCKCCmATo3UpLIsMAJEvxMYE8l9ky60QJheO6RHlyLbvDfl20Uba9fSuY4lO5nGbm26on8JX0qiqjF5rJdahET8qPZqDxLS0mIpyGgPq4WHlWNq3vy0PIopL-nbo1WloEePKvGHnIUtHGg8L-GNhb-gEpVspEchOeOj_CnmzjaSMPbm8APOZX_YBA9t6JQYMMHr03QXY94X-KSjO6Hl1Y2Ou5kSdnyzwLy-SIFhcLHCjjSV7HDdq6rWrzgxKmgBJqnZgZHJi3avLsBd6cC2JMXd6sV6K-FzjhZVQNY21oLu1bZVETur9g-7jHmZqGNzFleQaHBw5X9q58snwYjAhnjP5br6JEW4yCxKMxW0OQ1bgva3414Jcb6oyo9NedF39XwnRIZk=w1731-h942-s-no?authuser=0)
 
-Health system has also been implemented.  Death animation
+A Health system has been implemented for Oslo as well as for enemies. This allows them to have a starting health value and take damage as they come into contact with enemy projectiles, and eventually die when they lose all their health.
+
+Screens have been implemented to allow players to navigate through the game. 
+- Start Screen: To start the game, level select (future milestones)
+- Game Over Screen: When the player dies
+- End Screen: When the player finishes the game
 
 There are also mockups of certain monster designs 
 
@@ -69,7 +74,7 @@ There are also mockups of certain monster designs
 |----|------------|
 |14 May - 23 May| Basic game design and prototyping|
 |23 May - 25 May| Implementing Oslo's movement and Fireball|
-|25 May - 29 May| Start and End Screen <br /> Health and death logic <br /> Enemy logic <br /> Elemental orb logic|
+|25 May - 29 May| Start and End Screen <br /> Health and death logic <br /> Enemy logic <br /> Elemental orb pickup and equip logic|
 
 
 
