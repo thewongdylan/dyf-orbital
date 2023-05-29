@@ -67,8 +67,7 @@ There are also mockups of certain monster designs
 |----|------------|
 |14 May - 23 May| Basic game design and prototyping|
 |23 May - 25 May| Implementing Oslo's movement and Fireball|
-|25 May - 29 May| Start and End Screen <br /> Health system
-
+|25 May - 29 May| Start and End Screen <br /> Health and death logic <br /> Enemy logic <br /> Elemental orb logic|
 
 
 
