@@ -121,9 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  distance: 1
   damage: 1
-  lifetime: 1
+  lifetime: 2
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128

@@ -6,14 +6,11 @@ public class FireballMotion : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
     // [SerializeField] private float lifeTime;
-    [SerializeField] private float distance;
     [SerializeField] private int damage;
     [SerializeField] private float lifetime = 1;
     [SerializeField] private LayerMask enemyLayer;
     private GameObject oslo;
     private Vector3 dirMovement;
-
-
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
 

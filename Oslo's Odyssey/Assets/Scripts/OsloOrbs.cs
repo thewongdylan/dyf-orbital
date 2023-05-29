@@ -47,7 +47,12 @@ public class OsloOrbs : MonoBehaviour
         {
             Instantiate(fireball, shotPoint.position, Quaternion.identity);
         }
-        Destroy(equippedOrb);
         equippedOrbType = null;
+        DestroyOrb();
+    }
+
+    public void DestroyOrb()
+    {
+        Destroy(equippedOrb);
     }
 }

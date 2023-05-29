@@ -9,6 +9,8 @@ public class WaypointFollower : MonoBehaviour
     private int currentWaypointIndex = 0;
     [SerializeField] private float speed = 3f;
     private bool inMotion = true;
+    // [SerializeField] private bool toFlip = true;
+    private float dirX;
 
     // Start is called before the first frame update
     private void Start()
@@ -19,8 +21,21 @@ public class WaypointFollower : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        dirX = Input.GetAxisRaw("Horizontal");
         if (inMotion)
         {
+            // if (toFlip)
+            // {
+            //     if (dirX > 0f)
+            //     {
+            //         transform.eulerAngles = new Vector3(0, 0, 0);
+            //     }
+            //     else if (dirX < 0f)
+            //     {
+            //         transform.eulerAngles = new Vector3(0, 180, 0);
+            //     }
+            // }
+
             if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < 0.1f)
             // check if distance between current waypoint (heading towards) and current position < 0.1f (basically touching)
             {
