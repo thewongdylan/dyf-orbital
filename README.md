@@ -10,6 +10,7 @@ README
 * Tech Stack
 * Milestone 1
 * Timeline
+* Gameplay
 
 
 
@@ -73,7 +74,7 @@ There are also mockups of certain monster designs
 
 
 # Gameplay
-## story
+## Story
 The story starts in NoWay, Oslo's hometown. Oslo is part of a long running lineage of monks in NoWay who maintains the balance of the world. Right before Oslo is about to succeed his father as head monk, portals spawned all over the world, causing monsters to be unleashed across the worlds! Oslo must travel the world to acquire the elemental orbs that are essential to the balance of the world and use them to seal the portals once and for all.
 
 ## Abilities
