@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireballMotion : MonoBehaviour
+public class ProjectileMotion : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
     // [SerializeField] private float lifeTime;
     [SerializeField] private int damage;
     [SerializeField] private float lifetime = 1;
-    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private GameObject enemy;
     private GameObject oslo;
+    [SerializeField] private LayerMask playerLayer;
     private Vector3 dirMovement;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
@@ -20,7 +21,9 @@ public class FireballMotion : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();  
         oslo = GameObject.Find("Oslo");
-        dirMovement = oslo.transform.right;
+        // dirMovement = (enemy.transform.position - oslo.transform.position).normalized;
+        // dirMovement = new Vector3(dirMovement.x, 0, 0);
+        dirMovement = new Vector3(-1, 0, 0);
 
         Invoke("DestroyProjectile", lifetime);
     }
@@ -44,9 +47,9 @@ public class FireballMotion : MonoBehaviour
     {
         if (collision.gameObject != null)
         {
-            if (collision.gameObject.CompareTag("Enemy"))
+            if (collision.gameObject.CompareTag("Player"))
             {
-                collision.gameObject.GetComponent<EnemyLife>().TakeDamage(damage);
+                collision.gameObject.GetComponent<OsloLife>().TakeDamage(damage);
             }
             DestroyProjectile();
         }
@@ -55,6 +58,5 @@ public class FireballMotion : MonoBehaviour
     private void DestroyProjectile()
     {
         Destroy(gameObject);
-        oslo.GetComponent<OsloOrbs>().Spawn("Fire Orb");
     }
 }
