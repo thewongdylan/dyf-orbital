@@ -100,6 +100,11 @@ We intend to make Oslo's abilities interactive with his environment.
 
 **Water**: Ability to surf on water bodies for a short time
 
+## Naming Conventions
+**PascalCase**: Classes, Scripts, Animations
+**camelCase**: Variables
+
+
 
 ## DevLog
 
