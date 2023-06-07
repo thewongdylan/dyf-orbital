@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class ProjectileMotion : MonoBehaviour
 {
-    [SerializeField] private float speed = 10;
-    // [SerializeField] private float lifeTime;
-    [SerializeField] private int damage;
-    [SerializeField] private float lifetime = 1;
-    [SerializeField] private GameObject enemy;
-    private GameObject oslo;
-    [SerializeField] private LayerMask playerLayer;
-    private Vector3 dirMovement;
-    private SpriteRenderer sprite;
-    private Rigidbody2D rb;
+    public float speed = 10;
+    public int damage;
+    public float lifetime = 2;
+    public GameObject enemy;
+    public GameObject oslo;
+    public LayerMask playerLayer;
+    public Vector3 dirMovement;
+    public SpriteRenderer sprite;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();  
         oslo = GameObject.Find("Oslo");
-        // dirMovement = (enemy.transform.position - oslo.transform.position).normalized;
-        // dirMovement = new Vector3(dirMovement.x, 0, 0);
         dirMovement = new Vector3(-1, 0, 0);
 
         Invoke("DestroyProjectile", lifetime);
@@ -51,11 +48,15 @@ public class ProjectileMotion : MonoBehaviour
             {
                 collision.gameObject.GetComponent<OsloLife>().TakeDamage(damage);
             }
+            else if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.gameObject.GetComponent<EnemyLife>().TakeDamage(damage);
+            }
             DestroyProjectile();
         }
     }
 
-    private void DestroyProjectile()
+    public virtual void DestroyProjectile()
     {
         Destroy(gameObject);
     }
