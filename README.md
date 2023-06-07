@@ -102,6 +102,7 @@ We intend to make Oslo's abilities interactive with his environment.
 
 ## Naming Conventions
 **PascalCase**: Classes, Scripts, Animations
+
 **camelCase**: Variables
 
 
