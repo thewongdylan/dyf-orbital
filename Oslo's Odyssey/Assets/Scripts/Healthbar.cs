@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealthbar : MonoBehaviour
+public class Healthbar : MonoBehaviour
 {
-    [SerializeField] private EnemyLife enemyLife;
+    [SerializeField] private ObjectLife objectLife;
     private float startingHealth;
     [SerializeField] private Image totalHealthbar;
     [SerializeField] private Image currentHealthbar;
@@ -13,13 +13,13 @@ public class EnemyHealthbar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startingHealth = enemyLife.startingHealth;
-        totalHealthbar.fillAmount = enemyLife.currentHealth / startingHealth;
+        startingHealth = objectLife.startingHealth;
+        totalHealthbar.fillAmount = objectLife.currentHealth / startingHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentHealthbar.fillAmount = enemyLife.currentHealth / startingHealth;
+        currentHealthbar.fillAmount = objectLife.currentHealth / startingHealth;
     }
 }
