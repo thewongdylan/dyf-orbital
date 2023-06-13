@@ -14,11 +14,10 @@ public class OsloMovement : MonoBehaviour
     private float dirX;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
-    [SerializeField] private int maxJumps = 1;
+
     private enum MovementState { idle, running, jumping, falling };
-    [SerializeField] private int currJumps = 0;
 
-
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -33,17 +32,10 @@ public class OsloMovement : MonoBehaviour
     {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        
 
-        if(IsGrounded())
-        {
-            currJumps = 0;
-        }
-
-        if ((Input.GetButtonDown("Jump") && IsGrounded()) || (Input.GetButtonDown("Jump") && currJumps < maxJumps))
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            currJumps = currJumps + 1;
         }
 
         UpdateAnimationState();
