@@ -18,7 +18,7 @@ public class ItemCollector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Orb"))
+        if (collision.gameObject.CompareTag("Orb") && transform.GetComponent<OsloOrbs>().NoOrbEquipped())
         {
             Destroy(collision.gameObject);
             transform.GetComponent<OsloOrbs>().Spawn(collision.gameObject.name);
