@@ -8,13 +8,10 @@ public class OsloMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
-
     [SerializeField] private LayerMask jumpableGround;
-
     private float dirX;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
-
+    [SerializeField] private float jumpForce = 15f;
     private enum MovementState { idle, running, jumping, falling };
 
     
@@ -79,5 +76,4 @@ public class OsloMovement : MonoBehaviour
         // This allows jumping when overlapping downwards with the jumpableGround but NOT sideways overlap with other objects
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
-    
 }

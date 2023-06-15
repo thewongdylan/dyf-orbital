@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5061707357440067233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: orbPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5061707357620719095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: shotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,8 @@ GameObject:
   - component: {fileID: 5061707359089218410}
   - component: {fileID: 5061707359089218400}
   - component: {fileID: 5061707359089218401}
-  m_Layer: 0
+  - component: {fileID: 1529516223}
+  m_Layer: 3
   m_Name: Oslo
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -238,7 +239,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 7
-  jumpForce: 14
+  jumpForce: 15
+  mainCamera: {fileID: 0}
 --- !u!114 &5061707359089218400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +255,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbPos: {fileID: 5061707357440067233}
   shotPoint: {fileID: 5061707357620719095}
+  airOrb: {fileID: 6788144001814650273, guid: f1bece387683047bb910c35e7ba0426b, type: 3}
+  earthOrb: {fileID: 4750606139382481959, guid: ded32071e4ca441dc802c704d2f9fa6d, type: 3}
   fireOrb: {fileID: 1086589978603982770, guid: bffa2f9ae8c85458d80bba69a3748798, type: 3}
+  waterOrb: {fileID: 3079220650538028116, guid: 0f2d534509f814ca6bac7ee42c163a2a, type: 3}
   fireball: {fileID: 8430486792365984677, guid: af28a6090996b4784a6c1c9317868dff, type: 3}
 --- !u!114 &5061707359089218401
 MonoBehaviour:
@@ -267,3 +272,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e28cb18006e49f087f995109d584bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1529516223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061707359089218409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ab91e0c9df407a8154cf8209c1868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  startingHealth: 10
+  currentHealth: 0
