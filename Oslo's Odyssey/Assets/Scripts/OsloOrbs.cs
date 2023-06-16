@@ -13,27 +13,26 @@ public class OsloOrbs : MonoBehaviour
 
     [SerializeField] private GameObject fireball;
     private GameObject equippedOrb;
-    private string equippedOrbType;
+    public string equippedOrbType;
 
+    
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
+    private bool isAbilityActive = false;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        levitationAbility = GetComponent<LevitationAbility>(); // Get the LevitationAbility component from the same GameObject
+        levitationAbility = GetComponent<LevitationAbility>();
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (equippedOrbType == "Air")
-            {
-                ToggleLevitation(); // Toggle the levitation ability when the Fire1 button is pressed with the Air Orb equipped
-            }
-            else
-            {
-                Shoot();
-            }
+           
+             Shoot();
+            
         }
     }
 
@@ -71,21 +70,6 @@ public class OsloOrbs : MonoBehaviour
         return equippedOrb == null;
     }
 
-    private void ToggleLevitation()
-    {
-        if (levitationAbility != null)
-        {
-            if (levitationAbility.isLevitating)
-            {
-                levitationAbility.StopLevitation(); // Stop levitation when the ability is already active
-            }
-            else
-            {
-                levitationAbility.StartLevitation(); // Start levitation when the ability is not active
-            }
-        }
-    }
-
     private void Shoot()
     {
         if (equippedOrbType == "Fire")
@@ -106,9 +90,14 @@ public class OsloOrbs : MonoBehaviour
             equippedOrbType = null;
             DestroyOrb();
         }
-        else if (equippedOrbType == "Air")
+        else if (equippedOrbType == "Air" && equippedOrb != null)
         {
-            Instantiate(airOrb, shotPoint.position, Quaternion.identity);
+            Instantiate(airOrb, orbPos.position, Quaternion.identity);
+            if (levitationAbility != null)
+            {
+                levitationAbility.ToggleLevitation();
+                Debug.Log("triggered inside airorb condition");
+            }
         }
     }
 
