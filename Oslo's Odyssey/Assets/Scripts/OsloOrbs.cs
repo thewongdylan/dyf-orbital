@@ -15,24 +15,32 @@ public class OsloOrbs : MonoBehaviour
     private GameObject equippedOrb;
     private string equippedOrbType;
 
-    // Start is called before the first frame update
-    void Start()
+    private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
+
+    private void Start()
     {
-        
+        levitationAbility = GetComponent<LevitationAbility>(); // Get the LevitationAbility component from the same GameObject
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            if (equippedOrbType == "Air")
+            {
+                ToggleLevitation(); // Toggle the levitation ability when the Fire1 button is pressed with the Air Orb equipped
+            }
+            else
+            {
+                Shoot();
+            }
         }
     }
 
     public void Spawn(string name)
     {
-        // if (equippedOrb == null) {
+        if (equippedOrb == null)
+        {
             if (name == "Air Orb")
             {
                 equippedOrb = Instantiate(airOrb, orbPos.position, Quaternion.identity);
@@ -48,14 +56,14 @@ public class OsloOrbs : MonoBehaviour
                 equippedOrb = Instantiate(fireOrb, orbPos.position, Quaternion.identity);
                 equippedOrbType = "Fire";
             }
-            else if (name ==  "Water Orb")
+            else if (name == "Water Orb")
             {
-                equippedOrb = Instantiate(waterOrb, orbPos.position, Quaternion.identity); 
+                equippedOrb = Instantiate(waterOrb, orbPos.position, Quaternion.identity);
                 equippedOrbType = "Water";
             }
 
-            equippedOrb.gameObject.transform.SetParent(transform); 
-        // }
+            equippedOrb.gameObject.transform.SetParent(transform);
+        }
     }
 
     public bool NoOrbEquipped()
@@ -63,14 +71,45 @@ public class OsloOrbs : MonoBehaviour
         return equippedOrb == null;
     }
 
+    private void ToggleLevitation()
+    {
+        if (levitationAbility != null)
+        {
+            if (levitationAbility.isLevitating)
+            {
+                levitationAbility.StopLevitation(); // Stop levitation when the ability is already active
+            }
+            else
+            {
+                levitationAbility.StartLevitation(); // Start levitation when the ability is not active
+            }
+        }
+    }
+
     private void Shoot()
     {
         if (equippedOrbType == "Fire")
         {
             Instantiate(fireball, shotPoint.position, Quaternion.identity);
+            equippedOrbType = null;
+            DestroyOrb();
         }
-        equippedOrbType = null;
-        DestroyOrb();
+        else if (equippedOrbType == "Water")
+        {
+            Instantiate(waterOrb, shotPoint.position, Quaternion.identity);
+            equippedOrbType = null;
+            DestroyOrb();
+        }
+        else if (equippedOrbType == "Earth")
+        {
+            Instantiate(earthOrb, shotPoint.position, Quaternion.identity);
+            equippedOrbType = null;
+            DestroyOrb();
+        }
+        else if (equippedOrbType == "Air")
+        {
+            Instantiate(airOrb, shotPoint.position, Quaternion.identity);
+        }
     }
 
     public void DestroyOrb()
