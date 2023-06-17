@@ -10,14 +10,13 @@ public class OsloOrbs : MonoBehaviour
     public GameObject earthOrb;
     public GameObject fireOrb;
     public GameObject waterOrb;
-
     [SerializeField] private GameObject fireball;
     private GameObject equippedOrb;
     public string equippedOrbType;
 
     
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
-    private bool isAbilityActive = false;
+    // private bool isAbilityActive = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +29,7 @@ public class OsloOrbs : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-           
-             Shoot();
-            
+             Shoot();   
         }
     }
 
