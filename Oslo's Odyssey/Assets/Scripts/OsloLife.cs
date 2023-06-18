@@ -20,6 +20,6 @@ public class OsloLife : ObjectLife
 
     private void GameOver()
     {
-        SceneManager.LoadScene("Game Over Screen");
+        SceneManager.LoadScene("GameOver");
     }
 }
