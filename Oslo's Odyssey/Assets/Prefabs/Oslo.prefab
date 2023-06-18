@@ -260,6 +260,8 @@ MonoBehaviour:
   fireOrb: {fileID: 1086589978603982770, guid: bffa2f9ae8c85458d80bba69a3748798, type: 3}
   waterOrb: {fileID: 3079220650538028116, guid: 0f2d534509f814ca6bac7ee42c163a2a, type: 3}
   fireball: {fileID: 8430486792365984677, guid: af28a6090996b4784a6c1c9317868dff, type: 3}
+  availableOrbs: []
+  equippedOrb: {fileID: 0}
   equippedOrbType: 
 --- !u!114 &5061707359089218401
 MonoBehaviour:
@@ -287,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   anim: {fileID: 0}
-  startingHealth: 10
+  startingHealth: 5
   currentHealth: 0
 --- !u!114 &3906618947408393615
 MonoBehaviour:
@@ -301,6 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85ce2dd60d51454f9d5860989d200a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levitationDuration: 4
-  levitationForce: 1.3
+  levitationDuration: 3
+  levitationForce: 5
   isLevitating: 0

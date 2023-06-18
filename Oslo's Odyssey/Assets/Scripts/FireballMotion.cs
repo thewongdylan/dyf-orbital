@@ -19,6 +19,6 @@ public class FireballMotion : ProjectileMotion
     public override void DestroyProjectile()
     {
         Destroy(gameObject);
-        oslo.GetComponent<OsloOrbs>().Spawn("Fire Orb");
+        oslo.GetComponent<OsloOrbs>().SpawnExistingOrb("Fire Orb");
     }
 }

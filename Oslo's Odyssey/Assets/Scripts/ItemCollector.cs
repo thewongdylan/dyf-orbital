@@ -8,9 +8,8 @@ public class ItemCollector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Orb"))
         {
-            Debug.Log("collided with: " + collision.gameObject.name);
             Destroy(collision.gameObject);
-            transform.GetComponent<OsloOrbs>().Spawn(collision.gameObject.name);
+            transform.GetComponent<OsloOrbs>().SpawnNewOrb(collision.gameObject.name);
         }
     }
 

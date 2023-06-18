@@ -4,11 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-
-public class CurrentOrbDisplay : MonoBehaviour
+public class AvailableOrbDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI currentOrbText;
-    [SerializeField] private Image currentOrbImage;
+    [SerializeField] private TextMeshProUGUI availableOrbText;
+    private List<GameObject> availableOrbs;
+    [SerializeField] private Image[] availableOrbImages;
     [SerializeField] private GameObject oslo;
     private OsloOrbs osloOrbs;
     private Dictionary<string, Sprite> orbImageDict;
@@ -27,21 +27,31 @@ public class CurrentOrbDisplay : MonoBehaviour
             {"Fire Orb", fireOrbSprite},
             {"Water Orb", waterOrbSprite}
         };
-        currentOrbImage.enabled = false;
+        availableOrbs = osloOrbs.availableOrbs;
+        foreach (Image img in availableOrbImages)
+        {
+            img.enabled = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        availableOrbs = osloOrbs.availableOrbs;
         if (osloOrbs.NoOrbEquipped())
         {
-            currentOrbText.text = "No Orb Equipped";
+            availableOrbText.text = "No Orbs\nAvailable";
         }
         else
         {
-            currentOrbText.text = "Currently\nEquipped:";
-            currentOrbImage.enabled = true;
-            currentOrbImage.sprite = orbImageDict[osloOrbs.equippedOrbType];
+            availableOrbText.text = "Available\nOrbs:";
+            int len = availableOrbs.Count;
+            for (int i = 0; i < len; i++)
+            {
+                string orbName = availableOrbs[i].name;
+                availableOrbImages[i].enabled = true;
+                availableOrbImages[i].sprite = orbImageDict[orbName];
+            }
         }
     }
 }
