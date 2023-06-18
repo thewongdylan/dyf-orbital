@@ -57115,13 +57115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611755837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f5a821b485a42df85d225bff3420e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 88fe2370db29d4c7eb23ffb150fcf550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentOrbText: {fileID: 1782889164}
   currentOrbImage: {fileID: 732084477}
   oslo: {fileID: 906704504}
-  osloOrbs: {fileID: 0}
   airOrbSprite: {fileID: 21300000, guid: 0edf71fa22ff6428f9adab381c565805, type: 3}
   earthOrbSprite: {fileID: 21300000, guid: fb035ba17c4274b099dd75a2a15ea2de, type: 3}
   fireOrbSprite: {fileID: 21300000, guid: 63b30b4216b8f444084f9cffb565f29d, type: 3}
