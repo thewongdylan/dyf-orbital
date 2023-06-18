@@ -11,14 +11,14 @@ public class Healthbar : MonoBehaviour
     [SerializeField] private Image currentHealthbar;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         startingHealth = objectLife.startingHealth;
         totalHealthbar.fillAmount = objectLife.currentHealth / startingHealth;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         currentHealthbar.fillAmount = objectLife.currentHealth / startingHealth;
     }

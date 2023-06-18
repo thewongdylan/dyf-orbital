@@ -8,30 +8,37 @@ public class OsloMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
-
     [SerializeField] private LayerMask jumpableGround;
-
     private float dirX;
+    private float dirY;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
-
+    [SerializeField] private float jumpForce = 15f;
     private enum MovementState { idle, running, jumping, falling };
 
-    
-    // Start is called before the first frame update
+    private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        levitationAbility = GetComponent<LevitationAbility>(); // Get the LevitationAbility component
     }
 
-    // Update is called once per frame
     private void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        dirY = Input.GetAxisRaw("Vertical");
+
+        if (levitationAbility != null && levitationAbility.isLevitating)
+        {
+            rb.velocity = new Vector2(dirX * moveSpeed, dirY * moveSpeed);
+        }
+        else
+        {
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        }
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -39,6 +46,8 @@ public class OsloMovement : MonoBehaviour
         }
 
         UpdateAnimationState();
+
+        
     }
 
     private void UpdateAnimationState()
@@ -52,10 +61,10 @@ public class OsloMovement : MonoBehaviour
         }
         else if (dirX < 0f)
         {
-            state = MovementState.running; 
+            state = MovementState.running;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        else 
+        else
         {
             state = MovementState.idle;
         }
@@ -69,15 +78,11 @@ public class OsloMovement : MonoBehaviour
             state = MovementState.falling;
         }
 
-        anim.SetInteger("state", (int) state);
+        anim.SetInteger("state", (int)state);
     }
 
-    private bool IsGrounded() 
-    // Uses BoxCast to detect for downward overlap with the jumpableGround (hitbox of the ground)
+    private bool IsGrounded()
     {
-        // 0.1f checks for overlap between hitbox of Player and the jumpableGround
-        // This allows jumping when overlapping downwards with the jumpableGround but NOT sideways overlap with other objects
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
-    
 }
