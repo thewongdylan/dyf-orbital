@@ -11,7 +11,8 @@ public class NextScene : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) //&& levelCompleted == false)
         {
             // levelCompleted = true; // Needed when playing sound effects for level complete etc
-            Invoke("LoadNextScene", 0f);
+            //Invoke("LoadNextScene", 0f);
+            LoadNextScene();
         }
     }
 

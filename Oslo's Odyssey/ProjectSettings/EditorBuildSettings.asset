@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Air.unity
+    guid: 7755ad9611a724359a6948602dd00f02
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: a30bff303f9b442a59c00e7ac25623a7
   - enabled: 1

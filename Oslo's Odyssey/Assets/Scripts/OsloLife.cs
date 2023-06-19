@@ -15,11 +15,11 @@ public class OsloLife : ObjectLife
         Debug.Log("Oslo dies");
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death"); // death animation
-        transform.GetComponent<OsloOrbs>().DestroyOrb();
+        transform.GetComponent<OsloOrbs>().DestroyEquippedOrb();
     }
 
     private void GameOver()
     {
-        SceneManager.LoadScene("Game Over Screen");
+        SceneManager.LoadScene("GameOver");
     }
 }
