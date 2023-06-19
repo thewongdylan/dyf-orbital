@@ -98,7 +98,7 @@ public class OsloOrbs : MonoBehaviour
             // equippedOrbType = null;
             // DestroyEquippedOrb();
         }
-        else if (equippedOrbType == "Air")
+        else if (equippedOrbType == "Air Orb")
         { 
             levitationAbility.ToggleLevitation();
             Debug.Log("triggered inside airorb condition");
