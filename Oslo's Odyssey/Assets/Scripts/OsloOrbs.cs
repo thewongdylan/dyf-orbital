@@ -90,14 +90,11 @@ public class OsloOrbs : MonoBehaviour
             equippedOrbType = null;
             DestroyOrb();
         }
-        else if (equippedOrbType == "Air" && equippedOrb != null)
-        {
-            Instantiate(airOrb, orbPos.position, Quaternion.identity);
-            if (levitationAbility != null)
-            {
-                levitationAbility.ToggleLevitation();
-                Debug.Log("triggered inside airorb condition");
-            }
+        else if (equippedOrbType == "Air")
+        { 
+            levitationAbility.ToggleLevitation();
+            Debug.Log("triggered inside airorb condition");
+            
         }
     }
 

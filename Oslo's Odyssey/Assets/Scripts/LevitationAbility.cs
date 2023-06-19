@@ -3,7 +3,7 @@ using UnityEngine;
 public class LevitationAbility : MonoBehaviour
 {
     public float levitationDuration = 3f; // Duration of the levitation ability in seconds
-    public float levitationForce = 30f; // Force applied to the character during levitation
+    public float levitationForce = 3f; // Force applied to the character during levitation
     public bool isLevitating = false;
     private float levitationTimer = 0f;
     private Rigidbody2D characterRigidbody;
