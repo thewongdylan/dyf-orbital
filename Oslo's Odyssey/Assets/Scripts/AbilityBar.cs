@@ -8,6 +8,7 @@ public class AbilityBar : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         abilityBarSlider = GetComponent<Slider>();
         levitationAbility = transform.parent.transform.parent.GetComponent<LevitationAbility>(); // get levitation from oslo game obj
     }
