@@ -3,19 +3,35 @@ using UnityEngine;
 public class LevitationAbility : MonoBehaviour
 {
     public float levitationDuration = 3f; // Duration of the levitation ability in seconds
-    public float levitationForce = 30f; // Force applied to the character during levitation
+    public float levitationForce = 5f; // Force applied to the character during levitation
     public bool isLevitating = false;
     private float levitationTimer = 0f;
     private Rigidbody2D characterRigidbody;
     private Vector2 movementInput;
 
+    private AbilityBar abilityBar;
+
+
     private void Start()
     {
         characterRigidbody = GetComponent<Rigidbody2D>();
+        abilityBar = FindObjectOfType<AbilityBar>();
     }
 
     private void Update()
     {
+        
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        movementInput = new Vector2(moveHorizontal, moveVertical);
+
+        if (abilityBar.abilityBarSlider.value <= 0f)
+        {
+            StopLevitation();
+        }
+
+        
+
         if (isLevitating)
         {
             levitationTimer -= Time.deltaTime;
@@ -24,10 +40,6 @@ public class LevitationAbility : MonoBehaviour
                 StopLevitation();
             }
         }
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        movementInput = new Vector2(moveHorizontal, moveVertical);
     }
 
     public void ToggleLevitation()
@@ -36,7 +48,7 @@ public class LevitationAbility : MonoBehaviour
         {
             StopLevitation();
         }
-        else
+        else 
         {
             StartLevitation();
         }
@@ -44,11 +56,12 @@ public class LevitationAbility : MonoBehaviour
 
     public void StartLevitation()
     {
-        if (!isLevitating)
+        if (abilityBar.abilityBarSlider.value >= 1f && !isLevitating)
         {
             isLevitating = true;
-            characterRigidbody.gravityScale = 0f; // Set gravity scale to zero for the character
+            characterRigidbody.gravityScale = 0f;
             levitationTimer = levitationDuration;
+
         }
     }
 
@@ -57,9 +70,12 @@ public class LevitationAbility : MonoBehaviour
         if (isLevitating)
         {
             isLevitating = false;
-            characterRigidbody.gravityScale = 5f; // Restore the original gravity scale for the character
+            characterRigidbody.gravityScale = 5f;
+
         }
     }
+
+
 
     private void FixedUpdate()
     {

@@ -11,10 +11,11 @@ public class OsloOrbs : MonoBehaviour
     public GameObject fireOrb;
     public GameObject waterOrb;
     [SerializeField] private GameObject fireball;
-    private GameObject equippedOrb;
-    public string equippedOrbType;
-
-    
+    private Dictionary<string, GameObject> orbDict;
+    public List<GameObject> availableOrbs;
+    public GameObject equippedOrb = null;
+    public string equippedOrbType = null;
+    private int equippedOrbIndex = 0;
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
     // private bool isAbilityActive = false;
 
@@ -22,43 +23,25 @@ public class OsloOrbs : MonoBehaviour
     void Start()
     {
         levitationAbility = GetComponent<LevitationAbility>();
+        orbDict = new Dictionary<string, GameObject>(){
+            {"Air Orb", airOrb},
+            {"Earth Orb", earthOrb},
+            {"Fire Orb", fireOrb},
+            {"Water Orb", waterOrb}
+        };
+        availableOrbs = new List<GameObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Ability")) //spacebar
         {
-             Shoot();   
+             ActivateAbility();   
         }
-    }
-
-    public void Spawn(string name)
-    {
-        if (equippedOrb == null)
+        if (Input.GetButtonDown("Switch")) //e key
         {
-            if (name == "Air Orb")
-            {
-                equippedOrb = Instantiate(airOrb, orbPos.position, Quaternion.identity);
-                equippedOrbType = "Air";
-            }
-            else if (name == "Earth Orb")
-            {
-                equippedOrb = Instantiate(earthOrb, orbPos.position, Quaternion.identity);
-                equippedOrbType = "Earth";
-            }
-            else if (name == "Fire Orb")
-            {
-                equippedOrb = Instantiate(fireOrb, orbPos.position, Quaternion.identity);
-                equippedOrbType = "Fire";
-            }
-            else if (name == "Water Orb")
-            {
-                equippedOrb = Instantiate(waterOrb, orbPos.position, Quaternion.identity);
-                equippedOrbType = "Water";
-            }
-
-            equippedOrb.gameObject.transform.SetParent(transform);
+             SwitchOrb();   
         }
     }
 
@@ -67,38 +50,80 @@ public class OsloOrbs : MonoBehaviour
         return equippedOrb == null;
     }
 
-    private void Shoot()
+    public void SpawnNewOrb(string orbName)
     {
-        if (equippedOrbType == "Fire")
+        GameObject incomingOrb = orbDict[orbName];
+        Debug.Log("incoming orb: " + orbName);
+
+        if (NoOrbEquipped())
+        {
+            equippedOrb = Instantiate(incomingOrb, orbPos.position, Quaternion.identity);
+            equippedOrb.GetComponent<BoxCollider2D>().enabled = false;
+            equippedOrb.gameObject.transform.SetParent(transform);
+            equippedOrbType = orbName;
+            Debug.Log("equipped up: " + equippedOrbType);
+        }
+        availableOrbs.Add(incomingOrb);
+        Debug.Log(orbName + " added to avail orbs list");
+    }
+
+    public void SpawnExistingOrb(string orbName)
+    {
+        GameObject spawnedOrb = orbDict[orbName];
+        Debug.Log("spawning orb: " + spawnedOrb.ToString());
+        equippedOrb = Instantiate(spawnedOrb, orbPos.position, Quaternion.identity);
+        equippedOrb.GetComponent<BoxCollider2D>().enabled = false;
+        equippedOrb.gameObject.transform.SetParent(transform);
+        equippedOrbType = orbName;
+        Debug.Log("spawned: " + equippedOrbType);
+    }
+
+    private void ActivateAbility()
+    {
+        if (equippedOrbType == "Fire Orb")
         {
             Instantiate(fireball, shotPoint.position, Quaternion.identity);
             equippedOrbType = null;
-            DestroyOrb();
+            DestroyEquippedOrb();
         }
-        else if (equippedOrbType == "Water")
+        else if (equippedOrbType == "Water Orb")
         {
-            Instantiate(waterOrb, shotPoint.position, Quaternion.identity);
-            equippedOrbType = null;
-            DestroyOrb();
+            // Instantiate(waterOrb, shotPoint.position, Quaternion.identity);
+            // equippedOrbType = null;
+            // DestroyEquippedOrb();
         }
-        else if (equippedOrbType == "Earth")
+        else if (equippedOrbType == "Earth Orb")
         {
-            Instantiate(earthOrb, shotPoint.position, Quaternion.identity);
-            equippedOrbType = null;
-            DestroyOrb();
+            // Instantiate(earthOrb, shotPoint.position, Quaternion.identity);
+            // equippedOrbType = null;
+            // DestroyEquippedOrb();
         }
-        else if (equippedOrbType == "Air" && equippedOrb != null)
-        {
-            Instantiate(airOrb, orbPos.position, Quaternion.identity);
-            if (levitationAbility != null)
-            {
-                levitationAbility.ToggleLevitation();
-                Debug.Log("triggered inside airorb condition");
-            }
+        else if (equippedOrbType == "Air Orb")
+        { 
+            levitationAbility.ToggleLevitation();
+            Debug.Log("triggered inside airorb condition");
+            
         }
     }
 
-    public void DestroyOrb()
+    private void SwitchOrb()
+    {
+        DestroyEquippedOrb();
+        if (equippedOrbIndex < (availableOrbs.Count - 1))
+        {
+            equippedOrbIndex++;
+        }
+        else
+        {
+            equippedOrbIndex = 0;
+        }
+        equippedOrb = availableOrbs[equippedOrbIndex];
+        equippedOrbType = equippedOrb.name;
+        SpawnExistingOrb(equippedOrbType);
+        Debug.Log("switched to: " + equippedOrb);
+    }
+
+    public void DestroyEquippedOrb()
     {
         Destroy(equippedOrb);
     }
