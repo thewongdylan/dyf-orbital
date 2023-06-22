@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreezeCamera : MonoBehaviour
+public class FreezeCameraTile : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextScene : MonoBehaviour
+public class NextSceneTile : MonoBehaviour
 {
     // private bool levelCompleted = false;
 
@@ -11,7 +11,6 @@ public class NextScene : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) //&& levelCompleted == false)
         {
             // levelCompleted = true; // Needed when playing sound effects for level complete etc
-            //Invoke("LoadNextScene", 0f);
             LoadNextScene();
         }
     }
