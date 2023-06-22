@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class OsloOrbs : MonoBehaviour
 {
+    [SerializeField] private OsloData osloData;
     [SerializeField] private Transform orbPos;
     [SerializeField] private Transform shotPoint;
+    [SerializeField] private Transform abilityBarPos;
     public GameObject airOrb;
     public GameObject earthOrb;
     public GameObject fireOrb;
@@ -17,7 +19,7 @@ public class OsloOrbs : MonoBehaviour
     public string equippedOrbType;
     private int equippedOrbIndex;
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
-    [SerializeField] private OsloData osloData;
+    [SerializeField] private GameObject abilityBar;
     // private bool isAbilityActive = false;
 
     private void Awake()
@@ -93,6 +95,14 @@ public class OsloOrbs : MonoBehaviour
         }
         availableOrbs.Add(incomingOrb);
         Debug.Log(orbName + " added to avail orbs list");
+
+        if (orbName == "Air Orb")
+        {
+            GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
+            spawnedAbilityBar.gameObject.transform.SetParent(transform);
+            spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
+            Debug.Log("generated ability bar for air orb");
+        }
     }
 
     public void SpawnExistingOrb(string orbName)
@@ -104,6 +114,14 @@ public class OsloOrbs : MonoBehaviour
         equippedOrb.gameObject.transform.SetParent(transform);
         equippedOrbType = orbName;
         Debug.Log("spawned: " + equippedOrbType);
+
+        if (orbName == "Air Orb")
+        {
+            GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
+            spawnedAbilityBar.gameObject.transform.SetParent(transform);
+            spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
+            Debug.Log("generated ability bar for air orb");
+        }
     }
 
     private void ActivateAbility()
