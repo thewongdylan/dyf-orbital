@@ -48,7 +48,6 @@ MonoBehaviour:
   textIndex: 0
   instructionText: {fileID: 0}
   instructionDisplay: {fileID: 0}
-  duration: 2
 --- !u!61 &9121834487506417137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73,5 +72,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9680977, y: 0.09077954}
+  m_Size: {x: 4, y: 0.09077954}
   m_EdgeRadius: 0

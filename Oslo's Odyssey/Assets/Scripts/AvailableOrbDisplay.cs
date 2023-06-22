@@ -16,6 +16,7 @@ public class AvailableOrbDisplay : MonoBehaviour
     [SerializeField] private Sprite earthOrbSprite;
     [SerializeField] private Sprite fireOrbSprite;
     [SerializeField] private Sprite waterOrbSprite;
+    [SerializeField] private OsloData osloData;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +28,30 @@ public class AvailableOrbDisplay : MonoBehaviour
             {"Fire Orb", fireOrbSprite},
             {"Water Orb", waterOrbSprite}
         };
-        availableOrbs = osloOrbs.availableOrbs;
-        foreach (Image img in availableOrbImages)
+        availableOrbs = osloData.availableOrbs;
+        // Debug.Log("availDisplay Start: " + availableOrbs.Count);
+
+        foreach (Image img in availableOrbImages) // disable all images first
         {
             img.enabled = false;
+        }
+
+        if (osloOrbs.NoOrbEquipped())
+        {
+            // availableOrbText.text = "No Orbs\nAvailable";
+            Debug.Log("No Orbs Available");
+        }
+        else
+        {
+            availableOrbText.text = "Available\nOrbs:";
+            int len = availableOrbs.Count;
+            for (int i = 0; i < len; i++) // enable images based on number of available orbs
+            {
+                string orbName = availableOrbs[i].name;
+                availableOrbImages[i].enabled = true;
+                availableOrbImages[i].sprite = orbImageDict[orbName];
+            }
+            // Debug.Log(availableOrbs.Count + " orbs available");
         }
     }
 

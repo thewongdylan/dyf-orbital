@@ -42,20 +42,20 @@ public class TextTriggerTile : MonoBehaviour
 
     private void DisplayText()
     {
-        Debug.Log("displaying text: " + textList[textIndex]);
+        // Debug.Log("displaying text: " + textList[textIndex]);
         instructionText.enabled = true;
         instructionText.text = textList[textIndex];
-        Debug.Log("text index " + textIndex + " displayed");
+        // Debug.Log("text index " + textIndex + " displayed");
         instructionDisplay.SetActive(true);
-        Debug.Log("text background enabled");
+        // Debug.Log("text background enabled");
     }
 
     private void DestroyText()
     {
         instructionText.enabled = false;
-        Debug.Log("text index " + textIndex + " removed");
+        // Debug.Log("text index " + textIndex + " removed");
         instructionDisplay.SetActive(false);
-        Debug.Log("text background removed");
+        // Debug.Log("text background removed");
     }
 
     // private void DisplayText()

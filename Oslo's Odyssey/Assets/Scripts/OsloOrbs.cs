@@ -13,15 +13,31 @@ public class OsloOrbs : MonoBehaviour
     [SerializeField] private GameObject fireball;
     private Dictionary<string, GameObject> orbDict;
     public List<GameObject> availableOrbs;
-    public GameObject equippedOrb = null;
-    public string equippedOrbType = null;
-    private int equippedOrbIndex = 0;
+    public GameObject equippedOrb;
+    public string equippedOrbType;
+    private int equippedOrbIndex;
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
+    [SerializeField] private OsloData osloData;
     // private bool isAbilityActive = false;
+
+    private void Awake()
+    {
+        // Debug.Log("osloOrbs Awake");
+        availableOrbs = osloData.availableOrbs;
+        equippedOrb = osloData.equippedOrb;
+        equippedOrbType = osloData.equippedOrbType;
+        equippedOrbIndex = osloData.equippedOrbIndex;
+        // Debug.Log("osloData.equippedOrb:" + osloData.equippedOrb + osloData.equippedOrbType);
+
+        // Debug.Log("osloOrbs obtained orb data from osloData"); 
+        // Debug.Log("Awake: " + availableOrbs.Count + " " + equippedOrbType); 
+        // Debug.Log("Awake: orb equipped? :" + (equippedOrb != null));
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        // Debug.Log("osloOrbs Start");
         levitationAbility = GetComponent<LevitationAbility>();
         orbDict = new Dictionary<string, GameObject>(){
             {"Air Orb", airOrb},
@@ -29,12 +45,24 @@ public class OsloOrbs : MonoBehaviour
             {"Fire Orb", fireOrb},
             {"Water Orb", waterOrb}
         };
-        availableOrbs = new List<GameObject>();
+        // Debug.Log("Start: " + availableOrbs.Count + " " + equippedOrbType); 
+
+
+        if (!NoOrbEquipped()) // if an orb was equipped previously, spawn it
+        {
+            // Debug.Log("trying to spawn: " + equippedOrbType);
+            SpawnExistingOrb(equippedOrbType);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        osloData.availableOrbs = availableOrbs;
+        osloData.equippedOrb = equippedOrb;
+        osloData.equippedOrbType = equippedOrbType;
+        osloData.equippedOrbIndex = equippedOrbIndex;
+
         if (Input.GetButtonDown("Ability")) //spacebar
         {
              ActivateAbility();   
@@ -47,7 +75,7 @@ public class OsloOrbs : MonoBehaviour
 
     public bool NoOrbEquipped()
     {
-        return equippedOrb == null;
+        return equippedOrbType == null;
     }
 
     public void SpawnNewOrb(string orbName)
@@ -61,7 +89,7 @@ public class OsloOrbs : MonoBehaviour
             equippedOrb.GetComponent<BoxCollider2D>().enabled = false;
             equippedOrb.gameObject.transform.SetParent(transform);
             equippedOrbType = orbName;
-            Debug.Log("equipped up: " + equippedOrbType);
+            Debug.Log("equipped: " + equippedOrbType);
         }
         availableOrbs.Add(incomingOrb);
         Debug.Log(orbName + " added to avail orbs list");

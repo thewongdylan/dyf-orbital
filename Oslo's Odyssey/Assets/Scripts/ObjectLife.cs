@@ -10,16 +10,16 @@ public abstract class ObjectLife : MonoBehaviour
     public float currentHealth;
 
     // Start is called before the first frame update
-    private void Start()
+    public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
     
-    private void Awake()
-    {
-        currentHealth = startingHealth;
-    } 
+    // public virtual void Awake()
+    // {
+    //     currentHealth = startingHealth;
+    // } 
 
     public void TakeDamage(float damage)
     {

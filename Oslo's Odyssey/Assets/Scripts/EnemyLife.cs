@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyLife : ObjectLife
 {
-
+    public void Awake()
+    {
+        currentHealth = startingHealth;
+    }
     public override void Hit()
     {
         Debug.Log("Enemy takes a hit, current health remaining: " + currentHealth);

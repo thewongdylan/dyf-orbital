@@ -672,6 +672,7 @@ MonoBehaviour:
   availableOrbs: []
   equippedOrb: {fileID: 0}
   equippedOrbType: 
+  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
 --- !u!114 &5061707359089218401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,6 +701,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   startingHealth: 5
   currentHealth: 0
+  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
 --- !u!114 &3906618947408393615
 MonoBehaviour:
   m_ObjectHideFlags: 0

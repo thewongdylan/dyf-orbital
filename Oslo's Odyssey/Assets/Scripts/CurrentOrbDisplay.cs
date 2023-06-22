@@ -16,6 +16,7 @@ public class CurrentOrbDisplay : MonoBehaviour
     [SerializeField] private Sprite earthOrbSprite;
     [SerializeField] private Sprite fireOrbSprite;
     [SerializeField] private Sprite waterOrbSprite;
+    [SerializeField] private OsloData osloData;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,18 @@ public class CurrentOrbDisplay : MonoBehaviour
             {"Fire Orb", fireOrbSprite},
             {"Water Orb", waterOrbSprite}
         };
-        currentOrbImage.enabled = false;
+        
+        if (osloOrbs.NoOrbEquipped())
+        {
+            currentOrbImage.enabled = false;
+            currentOrbText.text = "No Orb Equipped";
+        }
+        else
+        {
+            currentOrbText.text = "Currently\nEquipped:";
+            currentOrbImage.enabled = true;
+            currentOrbImage.sprite = orbImageDict[osloData.equippedOrbType];
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +53,7 @@ public class CurrentOrbDisplay : MonoBehaviour
         {
             currentOrbText.text = "Currently\nEquipped:";
             currentOrbImage.enabled = true;
-            currentOrbImage.sprite = orbImageDict[osloOrbs.equippedOrbType];
+            currentOrbImage.sprite = orbImageDict[osloData.equippedOrbType];
         }
     }
 }
