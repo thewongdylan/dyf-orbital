@@ -55,6 +55,8 @@ public class OsloOrbs : MonoBehaviour
             // Debug.Log("trying to spawn: " + equippedOrbType);
             SpawnExistingOrb(equippedOrbType);
         }
+
+        abilityBar.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,6 +75,15 @@ public class OsloOrbs : MonoBehaviour
         {
              SwitchOrb();   
         }
+        if (equippedOrbType == "Air Orb")
+        {
+            abilityBar.SetActive(true);
+        }
+        else
+        {
+            abilityBar.SetActive(false);
+        }
+        
     }
 
     public bool NoOrbEquipped()
@@ -96,13 +107,14 @@ public class OsloOrbs : MonoBehaviour
         availableOrbs.Add(incomingOrb);
         Debug.Log(orbName + " added to avail orbs list");
 
-        if (orbName == "Air Orb")
-        {
-            GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
-            spawnedAbilityBar.gameObject.transform.SetParent(transform);
-            spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
-            Debug.Log("generated ability bar for air orb");
-        }
+        // if (orbName == "Air Orb")
+        // {
+        //     // GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
+        //     // spawnedAbilityBar.gameObject.transform.SetParent(transform);
+        //     // spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
+        //     abilityBar.SetActive(true);
+        //     Debug.Log("generated ability bar for air orb");
+        // }
     }
 
     public void SpawnExistingOrb(string orbName)
@@ -115,13 +127,14 @@ public class OsloOrbs : MonoBehaviour
         equippedOrbType = orbName;
         Debug.Log("spawned: " + equippedOrbType);
 
-        if (orbName == "Air Orb")
-        {
-            GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
-            spawnedAbilityBar.gameObject.transform.SetParent(transform);
-            spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
-            Debug.Log("generated ability bar for air orb");
-        }
+        // if (orbName == "Air Orb")
+        // {
+        // //     GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
+        // //     spawnedAbilityBar.gameObject.transform.SetParent(transform);
+        // //     spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
+        //     abilityBar.SetActive(true);
+        //     Debug.Log("generated ability bar for air orb");
+        // }
     }
 
     private void ActivateAbility()
