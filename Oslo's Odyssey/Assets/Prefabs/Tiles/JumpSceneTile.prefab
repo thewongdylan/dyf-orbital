@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &730252257452846822
+--- !u!1 &3919387691297733784
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 730252257452846841}
-  - component: {fileID: 730252257452846840}
-  - component: {fileID: 2316507142438258237}
+  - component: {fileID: 9147662251443573297}
+  - component: {fileID: 2289325161404258162}
+  - component: {fileID: 3859332716710771392}
   m_Layer: 0
-  m_Name: NextSceneTile
+  m_Name: JumpSceneTile
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &730252257452846841
+--- !u!4 &9147662251443573297
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730252257452846822}
+  m_GameObject: {fileID: 3919387691297733784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.503, y: -5.498, z: -0.03101283}
+  m_LocalPosition: {x: 10.55, y: -3.484, z: -0.048874356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &730252257452846840
+--- !u!61 &2289325161404258162
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730252257452846822}
+  m_GameObject: {fileID: 3919387691297733784}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017910957, y: 0.42986512}
+  m_Offset: {x: 0, y: 0.46004987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,17 +76,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85671234, y: 0.14026976}
+  m_Size: {x: 1, y: 0.079900265}
   m_EdgeRadius: 0
---- !u!114 &2316507142438258237
+--- !u!114 &3859332716710771392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730252257452846822}
+  m_GameObject: {fileID: 3919387691297733784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba1806f51aede433ea1a2b25c11c4446, type: 3}
+  m_Script: {fileID: 11500000, guid: e5d07c17ee7ed4eeca088205341b35b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 0
