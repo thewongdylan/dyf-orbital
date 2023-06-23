@@ -19,6 +19,7 @@ public class EnemyLife : ObjectLife
         Debug.Log("Enemy dies");
         transform.GetComponent<WaypointFollower>().SetMotion(false); // Only works if the enemy also has a WaypointFollower script attached
         anim.SetTrigger("death"); // death animation
+
     }
 
     private void DestroyEnemy()
