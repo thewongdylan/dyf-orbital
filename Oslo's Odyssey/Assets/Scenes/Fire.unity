@@ -231,6 +231,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
   m_PrefabInstance: {fileID: 378325829312787535}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &436605338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7384966757802989161, guid: bf8081cb8c8ca4591b0c3b51d3b58fd6, type: 3}
+  m_PrefabInstance: {fileID: 2246002040030414379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &504819186 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1868002796968986117, guid: 1377ef83b446549c4a1e84e75217c9c5, type: 3}
@@ -56783,6 +56788,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Devil
       objectReference: {fileID: 0}
+    - target: {fileID: 7790322029541565683, guid: 777f937277726467e9f3ae2ad22b781d, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237894953321619992, guid: 777f937277726467e9f3ae2ad22b781d, type: 3}
+      propertyPath: objectLife
+      value: 
+      objectReference: {fileID: 1529516223}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58667,6 +58680,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5061707359089218400, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
+      propertyPath: abilityBar
+      value: 
+      objectReference: {fileID: 436605338}
     - target: {fileID: 5061707359089218409, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: m_Name
       value: Oslo
