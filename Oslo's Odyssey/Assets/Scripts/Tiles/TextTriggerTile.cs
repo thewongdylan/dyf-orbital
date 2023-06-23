@@ -21,10 +21,6 @@ public class TextTriggerTile : MonoBehaviour
         //     "Use W to jump", //1
         //     "Walk over an orb to equip it", //2
         //     "Press SPACE to shoot", //3
-        //     "Walk over the Air Orb to pick it up", //4
-        //     "Press SPACE to activate its ability: Levitation", //5
-        //     "While levitating, use W,A,S,D to move around" //6
-        // };
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
