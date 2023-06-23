@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"/Users/dylan/Documents/GitHub.nosync/dyf-orbital/Oslo's Odyssey/WebGL builds/Oslo's Odyssey 240623;/Users/dylan/Documents/GitHub.nosync/dyf-orbital/Oslo's Odyssey/WebGL builds;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"/Users/yihfei/Documents/GitHub/dyf-orbital/Oslo's Odyssey/test2;/Users/yihfei/Documents/GitHub/dyf-orbital/Oslo's Odyssey/WebGL Builds;/Users/dylan/Documents/GitHub.nosync/dyf-orbital/Oslo's Odyssey/WebGL builds;;;;;;;\"}"
             }
         ]
     }
