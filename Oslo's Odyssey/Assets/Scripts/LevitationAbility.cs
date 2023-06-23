@@ -17,7 +17,7 @@ public class LevitationAbility : MonoBehaviour
         characterRigidbody = GetComponent<Rigidbody2D>();
         abilityBar = FindObjectOfType<AbilityBar>();
     }
-
+    
     private void Update()
     {
         
@@ -25,12 +25,13 @@ public class LevitationAbility : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         movementInput = new Vector2(moveHorizontal, moveVertical);
 
-        if (abilityBar.abilityBarSlider.value <= 0f)
+        if (abilityBar.isActiveAndEnabled)
         {
-            StopLevitation();
+            if (abilityBar.abilityBarSlider.value <= 0f)
+            {
+                StopLevitation();
+            }
         }
-
-        
 
         if (isLevitating)
         {
