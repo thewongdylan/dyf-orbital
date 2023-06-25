@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Fire.unity
     guid: 89d1b3663ddbb4b85990db9f498cb262
   - enabled: 1
+    path: Assets/Scenes/Water.unity
+    guid: 6ad209ab38a8c4d31adfa8d8f0fb76cc
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: a30bff303f9b442a59c00e7ac25623a7
   - enabled: 1
