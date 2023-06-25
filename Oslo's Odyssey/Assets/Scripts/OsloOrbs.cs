@@ -98,43 +98,27 @@ public class OsloOrbs : MonoBehaviour
 
         if (NoOrbEquipped())
         {
-            equippedOrb = Instantiate(incomingOrb, orbPos.position, Quaternion.identity);
-            equippedOrb.GetComponent<BoxCollider2D>().enabled = false;
-            equippedOrb.gameObject.transform.SetParent(transform);
-            equippedOrbType = orbName;
+            SpawnOrb(orbName, incomingOrb);
             Debug.Log("equipped: " + equippedOrbType);
         }
         availableOrbs.Add(incomingOrb);
         Debug.Log(orbName + " added to avail orbs list");
-
-        // if (orbName == "Air Orb")
-        // {
-        //     // GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
-        //     // spawnedAbilityBar.gameObject.transform.SetParent(transform);
-        //     // spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
-        //     abilityBar.SetActive(true);
-        //     Debug.Log("generated ability bar for air orb");
-        // }
     }
 
     public void SpawnExistingOrb(string orbName)
     {
         GameObject spawnedOrb = orbDict[orbName];
         Debug.Log("spawning orb: " + spawnedOrb.ToString());
-        equippedOrb = Instantiate(spawnedOrb, orbPos.position, Quaternion.identity);
+        SpawnOrb(orbName, spawnedOrb);
+        Debug.Log("spawned: " + equippedOrbType);
+    }
+
+    private void SpawnOrb(string orbName, GameObject orbToSpawn)
+    {
+        equippedOrb = Instantiate(orbToSpawn, orbPos.position, Quaternion.identity);
         equippedOrb.GetComponent<BoxCollider2D>().enabled = false;
         equippedOrb.gameObject.transform.SetParent(transform);
         equippedOrbType = orbName;
-        Debug.Log("spawned: " + equippedOrbType);
-
-        // if (orbName == "Air Orb")
-        // {
-        // //     GameObject spawnedAbilityBar = Instantiate(abilityBar, abilityBarPos.position, Quaternion.identity);
-        // //     spawnedAbilityBar.gameObject.transform.SetParent(transform);
-        // //     spawnedAbilityBar.GetComponent<Canvas>().worldCamera = Camera.main;
-        //     abilityBar.SetActive(true);
-        //     Debug.Log("generated ability bar for air orb");
-        // }
     }
 
     private void ActivateAbility()
@@ -150,18 +134,20 @@ public class OsloOrbs : MonoBehaviour
             // Instantiate(waterOrb, shotPoint.position, Quaternion.identity);
             // equippedOrbType = null;
             // DestroyEquippedOrb();
+            Debug.Log("Nothing should happen");
         }
         else if (equippedOrbType == "Earth Orb")
         {
             // Instantiate(earthOrb, shotPoint.position, Quaternion.identity);
             // equippedOrbType = null;
             // DestroyEquippedOrb();
+            Debug.Log("Nothing should happen");
+
         }
         else if (equippedOrbType == "Air Orb")
         { 
             levitationAbility.ToggleLevitation();
             Debug.Log("triggered inside airorb condition");
-            
         }
     }
 

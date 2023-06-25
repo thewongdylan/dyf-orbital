@@ -6,7 +6,6 @@ public class OsloMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
-    private SpriteRenderer sprite;
     private Animator anim;
     [SerializeField] private LayerMask jumpableGround;
     private float dirX;
@@ -21,7 +20,6 @@ public class OsloMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         levitationAbility = GetComponent<LevitationAbility>(); // Get the LevitationAbility component
     }

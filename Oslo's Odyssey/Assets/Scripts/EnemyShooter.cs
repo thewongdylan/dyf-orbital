@@ -13,12 +13,6 @@ public class EnemyShooter : MonoBehaviour
         InvokeRepeating("ShootProjectile", 1f, shotInterval);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void ShootProjectile()
     {
         Instantiate(projectile, shotPoint.position, Quaternion.identity);
