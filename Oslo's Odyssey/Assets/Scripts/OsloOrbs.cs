@@ -81,10 +81,12 @@ public class OsloOrbs : MonoBehaviour
         if (equippedOrbType == "Air Orb")
         {
             abilityBar.SetActive(true);
+            //Debug.Log("ability bar active");
         }
         else
         {
             abilityBar.SetActive(false);
+            //Debug.Log("ability bar inactive");
         }
         
     }

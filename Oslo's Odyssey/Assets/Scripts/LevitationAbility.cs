@@ -14,6 +14,10 @@ public class LevitationAbility : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         abilityBar = FindObjectOfType<AbilityBar>();
+        
+        
+        Debug.Log("levitating:" + isLevitating);
+        
     }
     
     private void Update()
@@ -45,6 +49,10 @@ public class LevitationAbility : MonoBehaviour
 
     public void ToggleLevitation()
     {
+        if (abilityBar == null)
+        {
+            abilityBar = FindObjectOfType<AbilityBar>();
+        }
         Debug.Log("toggle");
         if (isLevitating)
         {
@@ -58,11 +66,13 @@ public class LevitationAbility : MonoBehaviour
 
     public void StartLevitation()
     {
+        Debug.Log("called");
         if (abilityBar.abilityBarSlider.value >= 1f && !isLevitating)
         {
             isLevitating = true;
             rb.gravityScale = 0f;
             levitationTimer = levitationDuration;
+            Debug.Log("start levitation");
 
         }
     }
@@ -73,6 +83,7 @@ public class LevitationAbility : MonoBehaviour
         {
             isLevitating = false;
             rb.gravityScale = 5f;
+            Debug.Log("stop levitation");
 
         }
     }
