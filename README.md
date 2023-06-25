@@ -150,4 +150,24 @@ At the tutorial stages, he is greeted with text instructions that guides him on 
 Oslo encounters a ghost enemy that shoots out projectiles. Simple enemy that require minimal effort to defeat with whatever orbs that Oslo possesses.
 
 
+## Enemies
+**Air Stage: Wizard**
+![wizard preview](https://user-images.githubusercontent.com/89378503/248548091-9754b403-977e-4b66-adfc-be0b77429da7.png)
+We wanted enemies of air to be floating and easy to manoeuvre about as Oslo would be starting off without a combat ability until he reaches other stages. Shoots out tornado projectiles that are relatively easy to dodge.
 
+
+
+**Fire Stage: Devil**
+![devil preview](https://user-images.githubusercontent.com/89378503/248548095-77f5b324-c5a3-4992-894b-a98987f39bc8.png)
+Simple enemy which damages player once colliding with it.
+
+
+
+## Level Design
+**Air Stage**
+![Screenshot 2023-06-25 at 6 45 19 PM](https://user-images.githubusercontent.com/89378503/248549269-a11307ce-78b3-492a-abf3-c7b6c5d7765c.png)
+Air stage continues right off from tutorial, hence the similar design.
+
+**Fire Stage**
+![Screenshot 2023-06-25 at 6 46 09 PM](https://user-images.githubusercontent.com/89378503/248549272-225b26bc-01c5-4e28-b96d-ad65c3221660.png)
+Fire stage contains floor tiles (*orange lava*) which causes Oslo to take damage periodically standing on it.
