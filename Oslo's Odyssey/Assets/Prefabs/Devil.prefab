@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f8fc69d154645db803864a9ea149f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectLife: {fileID: 0}
+  objectLife: {fileID: 5530377981068403536}
   totalHealthbar: {fileID: 8363594297231468291}
   currentHealthbar: {fileID: 2069608904074809182}
 --- !u!1 &3454676428893544696
@@ -247,9 +247,9 @@ GameObject:
   - component: {fileID: 6527991099702105673}
   - component: {fileID: 5196600996777164789}
   - component: {fileID: 5530377981068403536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Devil
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,9 +487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 0}
   oslo: {fileID: 0}
-  damage: 0
+  damage: 1
 --- !u!114 &5530377981068403536
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1882906636123287401
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 796329028556198554}
-  m_Layer: 3
-  m_Name: abilityBarPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &796329028556198554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882906636123287401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 0.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5061707359089218415}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5061707357440067232
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +101,6 @@ Transform:
   m_Children:
   - {fileID: 5061707357440067233}
   - {fileID: 5061707357620719095}
-  - {fileID: 796329028556198554}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -234,7 +202,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &5061707359089218411
 BoxCollider2D:
@@ -313,7 +281,7 @@ MonoBehaviour:
   osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
   orbPos: {fileID: 5061707357440067233}
   shotPoint: {fileID: 5061707357620719095}
-  abilityBarPos: {fileID: 796329028556198554}
+  abilityBarPos: {fileID: 0}
   airOrb: {fileID: 6788144001814650273, guid: f1bece387683047bb910c35e7ba0426b, type: 3}
   earthOrb: {fileID: 4750606139382481959, guid: ded32071e4ca441dc802c704d2f9fa6d, type: 3}
   fireOrb: {fileID: 1086589978603982770, guid: bffa2f9ae8c85458d80bba69a3748798, type: 3}

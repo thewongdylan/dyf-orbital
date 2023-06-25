@@ -56945,6 +56945,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water Level
       objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Size.x
+      value: 6.308136
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Offset.x
+      value: -1.154068
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57033,7 +57041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147662251443573297, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.96
+      value: -29.71
       objectReference: {fileID: 0}
     - target: {fileID: 9147662251443573297, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
       propertyPath: m_LocalPosition.y
@@ -69205,6 +69213,14 @@ PrefabInstance:
     - target: {fileID: 6958522718403823586, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_Name
       value: Fire Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Size.x
+      value: 6.450369
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.2251844
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
