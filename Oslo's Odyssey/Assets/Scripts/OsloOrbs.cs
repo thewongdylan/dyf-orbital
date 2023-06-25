@@ -48,7 +48,10 @@ public class OsloOrbs : MonoBehaviour
             {"Water Orb", waterOrb}
         };
         // Debug.Log("Start: " + availableOrbs.Count + " " + equippedOrbType); 
-
+        if (levitationAbility != null)
+        {
+            Debug.Log("levitation not null");
+        }
 
         if (!NoOrbEquipped()) // if an orb was equipped previously, spawn it
         {
@@ -104,7 +107,12 @@ public class OsloOrbs : MonoBehaviour
             equippedOrbType = orbName;
             Debug.Log("equipped: " + equippedOrbType);
         }
-        availableOrbs.Add(incomingOrb);
+        // does not contain incoming orb
+        if (!availableOrbs.Contains(incomingOrb))
+        {
+            availableOrbs.Add(incomingOrb);
+        }
+        
         Debug.Log(orbName + " added to avail orbs list");
 
         // if (orbName == "Air Orb")

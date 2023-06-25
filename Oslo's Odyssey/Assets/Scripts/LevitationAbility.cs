@@ -24,12 +24,14 @@ public class LevitationAbility : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         movementInput = new Vector2(moveHorizontal, moveVertical);
-
-        if (abilityBar.isActiveAndEnabled)
+        if (abilityBar != null)
         {
-            if (abilityBar.abilityBarSlider.value <= 0f)
+            if (abilityBar.isActiveAndEnabled)
             {
-                StopLevitation();
+                if (abilityBar.abilityBarSlider.value <= 0f)
+                {
+                    StopLevitation();
+                }
             }
         }
 
