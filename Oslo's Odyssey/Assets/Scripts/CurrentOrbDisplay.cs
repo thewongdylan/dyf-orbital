@@ -7,16 +7,16 @@ using UnityEngine.UI;
 
 public class CurrentOrbDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI currentOrbText;
-    [SerializeField] private Image currentOrbImage;
+    [SerializeField] private OsloData osloData;
     [SerializeField] private GameObject oslo;
     private OsloOrbs osloOrbs;
+    [SerializeField] private TextMeshProUGUI currentOrbText;
+    [SerializeField] private Image currentOrbImage;
     private Dictionary<string, Sprite> orbImageDict;
     [SerializeField] private Sprite airOrbSprite;
     [SerializeField] private Sprite earthOrbSprite;
     [SerializeField] private Sprite fireOrbSprite;
     [SerializeField] private Sprite waterOrbSprite;
-    [SerializeField] private OsloData osloData;
 
     // Start is called before the first frame update
     void Start()

@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class ProjectileMotion : MonoBehaviour
 {
-    public float speed = 10;
-    public int damage;
-    public float lifetime = 2;
-    public GameObject enemy;
-    public GameObject oslo;
-    public LayerMask playerLayer;
-    public Vector3 dirMovement;
-    public SpriteRenderer sprite;
     public Rigidbody2D rb;
+    public Vector3 dirMovement;
+    public float speed = 10f;
+    public int damage;
+    public float lifetime = 2f;
+    public GameObject oslo;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();  
         oslo = GameObject.Find("Oslo");
         dirMovement = new Vector3(-1, 0, 0);
