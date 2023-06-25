@@ -45,6 +45,7 @@ public class LevitationAbility : MonoBehaviour
 
     public void ToggleLevitation()
     {
+        Debug.Log("toggle");
         if (isLevitating)
         {
             StopLevitation();
