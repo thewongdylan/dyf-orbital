@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 4867235369710059264}
   - component: {fileID: 5396014060853855902}
   - component: {fileID: 8707158742191803424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wizard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 2092052725100031546}
   - {fileID: 7109512931731165599}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3827196237167864004
 Rigidbody2D:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   anim: {fileID: 0}
-  startingHealth: 0
+  startingHealth: 5
   currentHealth: 0
 --- !u!114 &8707158742191803424
 MonoBehaviour:

@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 1868002797253724253}
   - component: {fileID: 1868002797253724243}
   - component: {fileID: 1868002797253724242}
+  - component: {fileID: 5442672126688483889}
   m_Layer: 5
   m_Name: HP Bar Current
   m_TagString: Untagged
@@ -446,6 +447,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5442672126688483889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868002797253724252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f8fc69d154645db803864a9ea149f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectLife: {fileID: 1868002797217740981}
+  totalHealthbar: {fileID: 1868002796968986117}
+  currentHealthbar: {fileID: 1868002797253724242}
 --- !u!1 &1868002797971524597
 GameObject:
   m_ObjectHideFlags: 0
