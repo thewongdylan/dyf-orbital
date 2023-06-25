@@ -5,12 +5,15 @@ public class AbilityBar : MonoBehaviour
 {
     public Slider abilityBarSlider;
     private LevitationAbility levitationAbility;
+    private GameObject oslo;
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
         abilityBarSlider = GetComponent<Slider>();
-        levitationAbility = transform.parent.transform.parent.GetComponent<LevitationAbility>(); // get levitation from oslo game obj
+        oslo = GameObject.Find("Oslo");
+        levitationAbility = oslo.GetComponent<LevitationAbility>(); // get levitation from oslo game obj
+        
     }
 
     private void Update()

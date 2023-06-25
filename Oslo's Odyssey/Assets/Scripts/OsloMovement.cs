@@ -6,7 +6,6 @@ public class OsloMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
-    private SpriteRenderer sprite;
     private Animator anim;
     [SerializeField] private LayerMask jumpableGround;
     private float dirX;
@@ -21,12 +20,12 @@ public class OsloMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         levitationAbility = GetComponent<LevitationAbility>(); // Get the LevitationAbility component
+        Debug.Log(levitationAbility);
     }
 
-    private void Update()
+    public void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
@@ -81,8 +80,35 @@ public class OsloMovement : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
+    // getters and setters for trial tests
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
+
+    public void SetMoveSpeed(float speed)
+    {
+        moveSpeed = speed;
+    }
+
+    public void SetDirX(float value)
+    {
+        dirX = value;
+    }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
+
+    public float GetDirX()
+    {
+        return dirX;
+    }
+
+    public Vector2 GetRigidbodyVelocity()
+    {
+        return rb.velocity;
+    }
+
 }

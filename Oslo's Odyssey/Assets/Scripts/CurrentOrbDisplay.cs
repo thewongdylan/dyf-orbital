@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 public class CurrentOrbDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI currentOrbText;
-    [SerializeField] private Image currentOrbImage;
+    [SerializeField] private OsloData osloData;
     [SerializeField] private GameObject oslo;
     private OsloOrbs osloOrbs;
+    [SerializeField] private TextMeshProUGUI currentOrbText;
+    [SerializeField] private Image currentOrbImage;
     private Dictionary<string, Sprite> orbImageDict;
     [SerializeField] private Sprite airOrbSprite;
     [SerializeField] private Sprite earthOrbSprite;
@@ -27,7 +28,18 @@ public class CurrentOrbDisplay : MonoBehaviour
             {"Fire Orb", fireOrbSprite},
             {"Water Orb", waterOrbSprite}
         };
-        currentOrbImage.enabled = false;
+        
+        if (osloOrbs.NoOrbEquipped())
+        {
+            currentOrbImage.enabled = false;
+            currentOrbText.text = "No Orb Equipped";
+        }
+        else
+        {
+            currentOrbText.text = "Currently\nEquipped:";
+            currentOrbImage.enabled = true;
+            currentOrbImage.sprite = orbImageDict[osloData.equippedOrbType];
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +53,7 @@ public class CurrentOrbDisplay : MonoBehaviour
         {
             currentOrbText.text = "Currently\nEquipped:";
             currentOrbImage.enabled = true;
-            currentOrbImage.sprite = orbImageDict[osloOrbs.equippedOrbType];
+            currentOrbImage.sprite = orbImageDict[osloData.equippedOrbType];
         }
     }
 }
