@@ -139,7 +139,7 @@ Oslo encounters a ghost enemy that shoots out projectiles. Simple enemy that req
 
 
 ## Enemies
-### Air Stage: Wizard**
+### Air Stage: Wizard
 ![wizard preview](https://user-images.githubusercontent.com/89378503/248548091-9754b403-977e-4b66-adfc-be0b77429da7.png)
 We wanted enemies of air to be floating and easy to manoeuvre about as Oslo would be starting off without a combat ability until he reaches other stages. Shoots out tornado projectiles that are relatively easy to dodge.
 
