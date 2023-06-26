@@ -9,7 +9,6 @@ README
 * Game Ideation
 * Tech Stack
 * Milestone 1
-* Timeline
 * Game Ideation
 * DevLog
 * Software Engineering Practices
@@ -66,14 +65,7 @@ Screens have been implemented to allow players to navigate through the game.
 - Game Over Screen: When the player dies
 - End Screen: When the player finishes the game
 
-## Timeline
-**Milestone 1**
 
-|Date| Features|
-|----|------------|
-|14 May - 23 May| Basic game design and prototyping|
-|23 May - 25 May| Implementing Oslo's movement and Fireball|
-|25 May - 29 May| Start and End Screen <br /> Health and death logic <br /> Enemy logic <br /> Elemental orb pickup and equip logic|
 
 
 
@@ -159,8 +151,8 @@ Simple enemy which damages player once colliding with it.
 ## Level Design
 
 ![Screenshot 2023-06-25 at 6 45 19 PM](https://user-images.githubusercontent.com/89378503/248549269-a11307ce-78b3-492a-abf3-c7b6c5d7765c.png)
-\Air stage continues right off from tutorial, hence the similar design.
+<br /> Air stage continues right off from tutorial, hence the similar design.
 
 
 ![Screenshot 2023-06-25 at 6 46 09 PM](https://user-images.githubusercontent.com/89378503/248549272-225b26bc-01c5-4e28-b96d-ad65c3221660.png)
-\Fire stage contains floor tiles (*orange lava*) which causes Oslo to take damage periodically standing on it.
+<br /> Fire stage contains floor tiles (*orange lava*) which causes Oslo to take damage periodically standing on it.
