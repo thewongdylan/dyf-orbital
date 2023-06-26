@@ -54,6 +54,7 @@ Orbs grant Oslo his power and are meant to contrast Oslo with flashy visuals and
 
 ## Milestone 1
 **Technical proof of concept**
+
 We have created a basic prototype game which includes Oslo basic movement and animation, as well as Oslo's Fireball skill.
 
 A Health system has been implemented for Oslo as well as for enemies. This allows them to have a starting health value and take damage as they come into contact with enemy projectiles, and eventually die when they lose all their health.
