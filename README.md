@@ -159,8 +159,8 @@ Simple enemy which damages player once colliding with it.
 ## Level Design
 
 ![Screenshot 2023-06-25 at 6 45 19 PM](https://user-images.githubusercontent.com/89378503/248549269-a11307ce-78b3-492a-abf3-c7b6c5d7765c.png)
-Air stage continues right off from tutorial, hence the similar design.
+\Air stage continues right off from tutorial, hence the similar design.
 
 
 ![Screenshot 2023-06-25 at 6 46 09 PM](https://user-images.githubusercontent.com/89378503/248549272-225b26bc-01c5-4e28-b96d-ad65c3221660.png)
-Fire stage contains floor tiles (*orange lava*) which causes Oslo to take damage periodically standing on it.
+\Fire stage contains floor tiles (*orange lava*) which causes Oslo to take damage periodically standing on it.
