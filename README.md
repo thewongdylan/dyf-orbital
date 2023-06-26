@@ -131,7 +131,6 @@ We use GitHub to allow us to collaborate efficiently on the game and fix any mer
 
 ## Classes
 Class inheritance was used in some cases, but for most other scripts, they are unrelated and instead are grouped by the components they are attached to in the Unity Editor.
-https://github.com/thewongdylan/dyf-orbital/issues/41#issuecomment-1606549868
 ![image](https://github.com/thewongdylan/dyf-orbital/assets/90192310/6cf070c4-2e8a-4fef-8f2b-fcd3ea630622)
 
 
