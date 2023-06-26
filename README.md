@@ -104,7 +104,7 @@ We intend to make Oslo's abilities interactive with his environment.
 ## DevLog
 
 The number of hours spent and task allocation can be seen in the project log below.
-https://docs.google.com/document/d/1XT90z5Mit2AHdJE8UPNN7zeuluRcQ2i8rtYhRSdc5VQ/edit 
+[https://docs.google.com/document/d/1XT90z5Mit2AHdJE8UPNN7zeuluRcQ2i8rtYhRSdc5VQ/edit ](https://docs.google.com/document/d/1zTZmu03rmhe_ehCaYfu1JF-_lHKfzGGcvf4tMw2lR38/edit?usp=sharing)
 
 ## Software Engineering Practices
 
