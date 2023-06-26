@@ -10,8 +10,10 @@ README
 * Tech Stack
 * Milestone 1
 * Timeline
-* Gameplay
+* Game Ideation
 * DevLog
+* Software Engineering Practices
+* Gameplay
 
 
 
@@ -85,8 +87,6 @@ The story starts in NoWay, Oslo's hometown. Oslo is part of a long running linea
 ## Abilities
 Oslo harnesses the power of the elemental orbs for combat with his enemy. He starts off with the Air orb he claims from the monastery and gains Air-related powers such as double jump and air strike (a normal melee attack).
 
-~~As he clears enemies and gains access to other elements, Oslo gains other abilities such as elemental missiles. Previous abilities such as air strike could be imbued with new elements for new and different effects. (Work in progress)~~
-
 ## Mechanics (MS2 and MS3)
 (work in progress)
 We intend to make Oslo's abilities interactive with his environment. 
@@ -110,21 +110,8 @@ We intend to make Oslo's abilities interactive with his environment.
 
 ## DevLog
 
-
-|      Events  | Dylan (hours)  | Yih Fei (hours)          |
-|----------------|-------------------------------|-----------------------------|
-|*Design*| 
-|Learning of Pixel Art            |1  |     7     |
-|Character Design and Animation        |     2       |15       |
-|Environment Design        |3|1|
-|*Scripting*|
-|Learning Unity, C# and Git| 15| 10|
-|**player** movement, health and attack | 25| 2|
-|**Enemy** movement and health|10|0|
-|**Scenes** start and end scenes | 10 | 0|
-|*Others*|
-|Creating poster and video for milestone 1| 5 | 4|
-|Meetups to brainstorm <br /> **mechanics** <br /> **story** <br />**gameplay**  | 10 | 10|
+The number of hours spent and task allocation can be seen in the project log below.
+https://docs.google.com/document/d/1XT90z5Mit2AHdJE8UPNN7zeuluRcQ2i8rtYhRSdc5VQ/edit 
 
 ## Software Engineering Practices
 
@@ -152,23 +139,23 @@ Oslo encounters a ghost enemy that shoots out projectiles. Simple enemy that req
 
 
 ## Enemies
-**Air Stage: Wizard**
+### Air Stage: Wizard**
 ![wizard preview](https://user-images.githubusercontent.com/89378503/248548091-9754b403-977e-4b66-adfc-be0b77429da7.png)
 We wanted enemies of air to be floating and easy to manoeuvre about as Oslo would be starting off without a combat ability until he reaches other stages. Shoots out tornado projectiles that are relatively easy to dodge.
 
 
 
-**Fire Stage: Devil**
+### Fire Stage: Devil
 ![devil preview](https://user-images.githubusercontent.com/89378503/248548095-77f5b324-c5a3-4992-894b-a98987f39bc8.png)
 Simple enemy which damages player once colliding with it.
 
 
 
 ## Level Design
-**Air Stage**
+
 ![Screenshot 2023-06-25 at 6 45 19 PM](https://user-images.githubusercontent.com/89378503/248549269-a11307ce-78b3-492a-abf3-c7b6c5d7765c.png)
 Air stage continues right off from tutorial, hence the similar design.
 
-**Fire Stage**
+
 ![Screenshot 2023-06-25 at 6 46 09 PM](https://user-images.githubusercontent.com/89378503/248549272-225b26bc-01c5-4e28-b96d-ad65c3221660.png)
 Fire stage contains floor tiles (*orange lava*) which causes Oslo to take damage periodically standing on it.
