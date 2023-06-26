@@ -79814,6 +79814,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2289325161404258162, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
+      propertyPath: m_Size.y
+      value: 6.219938
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289325161404258162, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.5300686
+      objectReference: {fileID: 0}
     - target: {fileID: 3859332716710771392, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
       propertyPath: sceneIndex
       value: 7
@@ -79828,7 +79836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147662251443573297, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.07
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 9147662251443573297, guid: a38ad3152e46343c79726828bf0a5e77, type: 3}
       propertyPath: m_LocalPosition.y
@@ -80444,6 +80452,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: textToDisplay
+      value: The fire orb allows you to shoot fireballs which damage enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: instructionText
       value: 
       objectReference: {fileID: 966616791}
@@ -80457,11 +80469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -911.187
+      value: -918.05
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -154.88
+      value: -174.78
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80497,7 +80509,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6958522718403823586, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_Name
-      value: Activate Levitation
+      value: Fireball Explanation
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Size.x
+      value: 4.1038465
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Size.y
+      value: 1.74899
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.051923275
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.2837157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -94035,6 +94063,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 12, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 13, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 14, y: -12, z: 0}
     second:
       serializedVersion: 2
@@ -99863,7 +99911,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: e10aa3bd55c6e422099181703124d972, type: 2}
   - m_RefCount: 93
     m_Data: {fileID: 11400000, guid: 06427f2b9f8664f24bb3e29afd03099f, type: 2}
-  - m_RefCount: 37
+  - m_RefCount: 39
     m_Data: {fileID: 11400000, guid: 4d826093da1324b218df40017e11ccdb, type: 2}
   - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: 33ef45d23790e41778bfbb7d15881946, type: 2}
@@ -99896,14 +99944,14 @@ Tilemap:
     m_Data: {fileID: -582225497, guid: 235f7feb31a3944aca52b32f8b52a1b5, type: 3}
   - m_RefCount: 93
     m_Data: {fileID: -984900986, guid: 235f7feb31a3944aca52b32f8b52a1b5, type: 3}
-  - m_RefCount: 37
+  - m_RefCount: 39
     m_Data: {fileID: 1815380803, guid: 235f7feb31a3944aca52b32f8b52a1b5, type: 3}
   - m_RefCount: 18
     m_Data: {fileID: 293144831, guid: 235f7feb31a3944aca52b32f8b52a1b5, type: 3}
   - m_RefCount: 33
     m_Data: {fileID: -1795156800, guid: c318b525461c143a991d6386861163c3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1890
+  - m_RefCount: 1892
     m_Data:
       e00: 1
       e01: 0
@@ -99940,7 +99988,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1890
+  - m_RefCount: 1892
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -100049,6 +100097,10 @@ CompositeCollider2D:
       - X: 140000000
         Y: 220000000
       - X: 140000000
+        Y: -110000000
+      - X: 120000000
+        Y: -110000000
+      - X: 120000000
         Y: -120000000
       - X: 130000000
         Y: -120000000
@@ -100379,7 +100431,9 @@ CompositeCollider2D:
       - {x: 17, y: 3.0000293}
       - {x: 16.999971, y: 22}
       - {x: 14, y: 21.999971}
-      - {x: 13.999971, y: -12}
+      - {x: 13.999971, y: -11}
+      - {x: 12, y: -11.00003}
+      - {x: 12.00003, y: -12}
       - {x: 13, y: -12.00003}
       - {x: 13.00003, y: -17}
       - {x: 14, y: -17.000029}
@@ -100719,11 +100773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1086589978603982773, guid: bffa2f9ae8c85458d80bba69a3748798, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.96
+      value: -14.94
       objectReference: {fileID: 0}
     - target: {fileID: 1086589978603982773, guid: bffa2f9ae8c85458d80bba69a3748798, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.27
+      value: -13.1
       objectReference: {fileID: 0}
     - target: {fileID: 1086589978603982773, guid: bffa2f9ae8c85458d80bba69a3748798, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100937,6 +100991,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: textToDisplay
+      value: Press E to switch between orbs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: instructionText
       value: 
       objectReference: {fileID: 966616791}
@@ -100950,11 +101008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -905.567
+      value: -917.98
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -154.8958
+      value: -170.97
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100990,7 +101048,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6958522718403823586, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_Name
-      value: Levitation Explanation
+      value: Switching Orbs
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Size.y
+      value: 2.885872
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121834487506417137, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.8063354
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -101131,6 +101197,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
+      propertyPath: textToDisplay
+      value: Beware the lava, which will damage you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: instructionText
       value: 
       objectReference: {fileID: 966616791}
@@ -101144,11 +101214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -916.671
+      value: -920.99
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -154.893
+      value: -158.7
       objectReference: {fileID: 0}
     - target: {fileID: 6654420791150602938, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -101184,7 +101254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6958522718403823586, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: m_Name
-      value: Pickup Orb
+      value: Lava
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -101344,6 +101414,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3906618947408393615, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
+      propertyPath: levitationForce
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5061707359089218400, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: abilityBar
       value: 
@@ -101370,7 +101444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061707359089218415, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.89
+      value: -19.89
       objectReference: {fileID: 0}
     - target: {fileID: 5061707359089218415, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -101482,6 +101556,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6220972576622473590, guid: d0d6fecfe9ce04298ae9b9998e03235e, type: 3}
+      propertyPath: m_Size.y
+      value: 6.2015524
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220972576622473590, guid: d0d6fecfe9ce04298ae9b9998e03235e, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.4476209
+      objectReference: {fileID: 0}
     - target: {fileID: 6220972576622473591, guid: d0d6fecfe9ce04298ae9b9998e03235e, type: 3}
       propertyPath: m_Name
       value: FreezeCameraTile
