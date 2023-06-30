@@ -1,10 +1,3 @@
-
-# Oslo's Odyssey
-Welcome to our game development log/README.
-<br /> Click [here](https://play.unity.com/mg/other/webgl-builds-355406) for a working prototye of our game!
-
-## Table of Contents
-README
 # Oslo's Odyssey
 Welcome to our game development log/README.
 <br /> Click [here](https://play.unity.com/mg/other/webgl-builds-355406) for a working prototye of our game!
