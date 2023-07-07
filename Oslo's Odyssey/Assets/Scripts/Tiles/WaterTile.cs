@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaterTile : MonoBehaviour
 {
+    public static bool inWater = false;
     [SerializeField] private float drag = 10f;
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -11,6 +12,7 @@ public class WaterTile : MonoBehaviour
         {
             Debug.Log("water drag enabled");
             collision.gameObject.GetComponent<Rigidbody2D>().drag = drag;
+            inWater = true;
         }
     }
 
@@ -19,6 +21,7 @@ public class WaterTile : MonoBehaviour
         {
             Debug.Log("water drag disabled");
             collision.gameObject.GetComponent<Rigidbody2D>().drag = drag;
+            inWater = false;
         }
     }
 }

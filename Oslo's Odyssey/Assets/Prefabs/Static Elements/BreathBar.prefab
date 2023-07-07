@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5471262714903230507}
   - component: {fileID: 9161904816478795317}
   - component: {fileID: 2396940360922100908}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Outer Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 6777181187413554534}
   - component: {fileID: 370905769954371413}
   - component: {fileID: 1328156917088427267}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8396226, b: 0.14800029, a: 1}
+  m_Color: {r: 0, g: 0.7687903, b: 0.8392157, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -162,8 +162,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3389485859138684363}
   - component: {fileID: 4236020541721736628}
-  - component: {fileID: 2560191005783567361}
-  m_Layer: 3
+  - component: {fileID: 6964677884857190788}
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2560191005783567361
+--- !u!114 &6964677884857190788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,10 +253,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4767246755901952457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93f371447d074dd68ee7ed1121e2cd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 204b1e55dd12b49e39e66b8373b0d229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityBarSlider: {fileID: 0}
+  damage: 1
+  damageInterval: 1
+  osloLife: {fileID: 0}
+  breathBarSlider: {fileID: 0}
+  breathDuration: 5
 --- !u!1 &5279189525765311445
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +272,7 @@ GameObject:
   - component: {fileID: 2828744048343570135}
   - component: {fileID: 5801296276994378524}
   - component: {fileID: 1863732389051339065}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Inner Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,9 +350,8 @@ GameObject:
   - component: {fileID: 945177556716274888}
   - component: {fileID: 2428055010370979948}
   - component: {fileID: 483476426540886949}
-  - component: {fileID: 2685567424028174331}
-  m_Layer: 3
-  m_Name: AbilityBar
+  m_Layer: 5
+  m_Name: BreathBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +371,7 @@ RectTransform:
   m_Children:
   - {fileID: 3389485859138684363}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -396,7 +399,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &2428055010370979948
 MonoBehaviour:
@@ -438,18 +441,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2685567424028174331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5641257341793869694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e885c342a376c48fcadfda9f61fcf293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6595425829719585922
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2739469001327388530}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +489,7 @@ GameObject:
   - component: {fileID: 7002823156843676106}
   - component: {fileID: 3279464080142893874}
   - component: {fileID: 509035475511715432}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Center Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
