@@ -68836,6 +68836,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6964677884857190788, guid: eeb756495e9444ce18f6467c9acef31b, type: 3}
+      propertyPath: osloLife
+      value: 
+      objectReference: {fileID: 1529516223}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

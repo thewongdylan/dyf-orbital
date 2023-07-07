@@ -46,7 +46,12 @@ public class BreathBar : MonoBehaviour
         if (isPlayerTakingDamage && timer >= damageInterval)
         {
             Debug.Log("taking damage");
-            osloLife.TakeDamage(damage);
+            if (osloLife != null)
+            {
+                osloLife.TakeDamage(damage);
+                Debug.Log("oslo life not null");
+            }
+            
             timer = 0f;
         }
         timer += Time.deltaTime;
