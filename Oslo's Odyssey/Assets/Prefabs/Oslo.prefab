@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 5061707359089218401}
   - component: {fileID: 1529516223}
   - component: {fileID: 3906618947408393615}
+  - component: {fileID: 640250403551395896}
   m_Layer: 3
   m_Name: Oslo
   m_TagString: Player
@@ -101,6 +102,7 @@ Transform:
   m_Children:
   - {fileID: 5061707357440067233}
   - {fileID: 5061707357620719095}
+  - {fileID: 6317394809795426747}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -335,3 +337,49 @@ MonoBehaviour:
   levitationDuration: 3
   levitationForce: 5
   isLevitating: 0
+--- !u!114 &640250403551395896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061707359089218409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3062a988fa04126bec4a674ed6fa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathBar: {fileID: 8012830667762590864, guid: 1c7a111a441784cc1a029bff852e88eb, type: 3}
+  breathBarPos: {fileID: 6317394809795426747}
+  isDrowning: 0
+--- !u!1 &9044341254781839354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6317394809795426747}
+  m_Layer: 3
+  m_Name: breathBarPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6317394809795426747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044341254781839354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.75, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5061707359089218415}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
