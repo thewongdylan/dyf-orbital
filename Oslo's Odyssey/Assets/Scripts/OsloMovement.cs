@@ -45,8 +45,6 @@ public class OsloMovement : MonoBehaviour
         }
 
         UpdateAnimationState();
-
-        
     }
 
     private void UpdateAnimationState()
