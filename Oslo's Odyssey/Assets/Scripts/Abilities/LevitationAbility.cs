@@ -10,7 +10,7 @@ public class LevitationAbility : MonoBehaviour
     public bool isLevitating = false;
     private float levitationTimer = 0f;
     private AbilityBar abilityBar;
-    [SerializeField] Transform position;
+    
     
 
     private void Start()
@@ -109,7 +109,7 @@ public class LevitationAbility : MonoBehaviour
     {
         float elapsedTime = 0f;
         Vector2 initialPosition = transform.position;
-        Vector2 targetPosition = initialPosition + new Vector2(0, 2); // Move character 1 unit up
+        Vector2 targetPosition = initialPosition + new Vector2(0, 1); // Move character 1 unit up
 
         while (elapsedTime < 0.25f)
         {
