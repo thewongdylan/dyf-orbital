@@ -17,6 +17,7 @@ public class OsloLife : ObjectLife
     private void Update()
     {
         osloData.currentHealth = currentHealth;
+        osloData.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     public override void Hit()

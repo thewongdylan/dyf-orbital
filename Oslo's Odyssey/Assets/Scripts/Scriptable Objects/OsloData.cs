@@ -11,6 +11,7 @@ public class OsloData : ScriptableObject
     public GameObject equippedOrb;
     public string equippedOrbType;
     public int equippedOrbIndex;
+    public int lastSceneIndex;
 
     private void OnEnable()
     {
@@ -23,6 +24,7 @@ public class OsloData : ScriptableObject
         equippedOrb = null;
         equippedOrbType = null;
         equippedOrbIndex = 0;
+        lastSceneIndex = 0;
 
         // Debug.Log("created empty avail orbs list");
         // Debug.Log("avail orb list size: " + availableOrbs.Count);

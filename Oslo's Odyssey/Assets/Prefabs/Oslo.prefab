@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 1529516223}
   - component: {fileID: 3906618947408393615}
   - component: {fileID: 640250403551395896}
+  - component: {fileID: 1922535524044794959}
   m_Layer: 3
   m_Name: Oslo
   m_TagString: Player
@@ -352,6 +353,21 @@ MonoBehaviour:
   breathBar: {fileID: 8012830667762590864, guid: 1c7a111a441784cc1a029bff852e88eb, type: 3}
   breathBarPos: {fileID: 6317394809795426747}
   isDrowning: 0
+--- !u!114 &1922535524044794959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061707359089218409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8c73754a0b64562ae4c32159a7457d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
+  isDiving: 0
+  divingForce: 5
 --- !u!1 &9044341254781839354
 GameObject:
   m_ObjectHideFlags: 0

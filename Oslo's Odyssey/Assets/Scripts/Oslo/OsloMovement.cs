@@ -15,6 +15,7 @@ public class OsloMovement : MonoBehaviour
     private enum MovementState { idle, running, jumping, falling };
 
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
+    private DivingAbility divingAbility;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class OsloMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         levitationAbility = GetComponent<LevitationAbility>(); // Get the LevitationAbility component
-        Debug.Log(levitationAbility);
+        divingAbility = GetComponent<DivingAbility>();
     }
 
     public void Update()
@@ -30,7 +31,8 @@ public class OsloMovement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
 
-        if (levitationAbility != null && levitationAbility.isLevitating)
+        if ((levitationAbility != null && levitationAbility.isLevitating) ||
+            (divingAbility.isDiving))
         {
             rb.velocity = new Vector2(dirX * moveSpeed, dirY * moveSpeed);
         }

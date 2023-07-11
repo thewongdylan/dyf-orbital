@@ -36,11 +36,11 @@ public class BreathBar : MonoBehaviour
         if (breathBarController.isDrowning)
         {
             breathBarSlider.value -= Time.deltaTime / breathDuration;
-            Debug.Log("breath bar depleting");
+            // Debug.Log("breath bar depleting");
             if (breathBarSlider.value == 0)
             {
                 isPlayerTakingDamage = true;
-                Debug.Log("breath ran out, starting to take damage");
+                // Debug.Log("breath ran out, starting to take damage");
             }
             isBarFull = false;
         }
@@ -49,12 +49,12 @@ public class BreathBar : MonoBehaviour
             if (breathBarSlider.value < 1)
             {
                 breathBarSlider.value += Time.deltaTime / breathDuration;
-                Debug.Log("breath bar refilling");
+                // Debug.Log("breath bar refilling");
             }
             else if (breathBarSlider.value == 1)
             {
                 isBarFull = true;
-                Debug.Log("breath bar full");
+                // Debug.Log("breath bar full");
             }
             isPlayerTakingDamage = false;
         }
@@ -62,14 +62,8 @@ public class BreathBar : MonoBehaviour
         // damage logic
         if (isPlayerTakingDamage && timer >= damageInterval)
         {
-            Debug.Log("taking damage from water");
-            // if (osloLife != null)
-            // {
-            //     osloLife.TakeDamage(damage);
-            //     Debug.Log("oslo life not null");
-            // }
             osloLife.TakeDamage(damage);
-            Debug.Log("taking damage from water");
+            // Debug.Log("taking damage from water");
             timer = 0f;
         }
         timer += Time.deltaTime;

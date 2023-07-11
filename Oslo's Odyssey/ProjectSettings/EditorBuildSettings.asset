@@ -27,9 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Water.unity
     guid: 6ad209ab38a8c4d31adfa8d8f0fb76cc
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: d4a8fa4a3f4574f75b5f31de500bf7b8
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: a30bff303f9b442a59c00e7ac25623a7
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 7fbabb29ef747434abc82044e3ae26d6
   m_configObjects: {}

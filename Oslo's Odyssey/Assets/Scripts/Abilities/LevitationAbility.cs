@@ -14,10 +14,7 @@ public class LevitationAbility : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         abilityBar = FindObjectOfType<AbilityBar>();
-        
-        
         Debug.Log("levitating:" + isLevitating);
-        
     }
     
     private void Update()

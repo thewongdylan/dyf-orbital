@@ -88,7 +88,6 @@ public class OsloOrbs : MonoBehaviour
             abilityBar.SetActive(false);
             //Debug.Log("ability bar inactive");
         }
-        
     }
 
     public bool NoOrbEquipped()
@@ -144,7 +143,7 @@ public class OsloOrbs : MonoBehaviour
             // Instantiate(waterOrb, shotPoint.position, Quaternion.identity);
             // equippedOrbType = null;
             // DestroyEquippedOrb();
-            Debug.Log("Nothing should happen");
+            Debug.Log("Nothing should happen, water ability is passive");
         }
         else if (equippedOrbType == "Earth Orb")
         {
@@ -156,8 +155,16 @@ public class OsloOrbs : MonoBehaviour
         }
         else if (equippedOrbType == "Air Orb")
         { 
-            levitationAbility.ToggleLevitation();
-            Debug.Log("triggered inside airorb condition");
+            if (WaterTile.inWater)
+            {
+                Debug.Log("levitation cannot be used underwater");
+            }
+            else
+            {
+                levitationAbility.ToggleLevitation();
+                Debug.Log("levitaton activated");
+            }
+
         }
     }
 

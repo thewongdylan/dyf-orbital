@@ -31,13 +31,13 @@ public class OsloHealthbar : MonoBehaviour
     private void SetHearts()
     {
         int fullHearts = (int) Mathf.Ceil(currentHealth / 4);
-        Debug.Log("full hearts remaining: " + fullHearts);
+        // Debug.Log("full hearts remaining: " + fullHearts);
         for (int i = 0; i < fullHearts; i++)
         {
             osloCurrentHearts[i].fillAmount = 1;
         }
         float remainderHeart = currentHealth % 4;
-        Debug.Log("last heart should be: " + remainderHeart / 4 + " filled");
+        // Debug.Log("last heart should be: " + remainderHeart / 4 + " filled");
         if (fullHearts < numOfHearts) 
         {
             osloCurrentHearts[fullHearts].fillAmount = remainderHeart / 4;
