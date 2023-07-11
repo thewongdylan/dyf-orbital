@@ -12,11 +12,6 @@ public class OsloLife : ObjectLife
         base.Start();
         startingHealth = osloData.startingHealth;
         currentHealth = osloData.currentHealth;
-        // Debug.Log("oslo life Start triggered");
-        // Debug.Log("oslodata.starting: " + startingHealth);
-        // Debug.Log("oslodata.current: " + currentHealth);
-        // Debug.Log("starting: " + startingHealth);
-        // Debug.Log("current: " + currentHealth);
     }
 
     private void Update()

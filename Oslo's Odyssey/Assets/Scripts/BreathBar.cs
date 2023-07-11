@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BreathBar : MonoBehaviour
 {
     // damage logic fields
-    [SerializeField] private float damage = 1f;
+    [SerializeField] private int damage = 1;
     [SerializeField] private float damageInterval = 1f;
     private float timer;
     private bool isPlayerTakingDamage = false;

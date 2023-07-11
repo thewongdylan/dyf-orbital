@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Oslo Data")]
 public class OsloData : ScriptableObject
 {
-    public float startingHealth = 5;
-    public float currentHealth;
+    public int startingHealth;
+    public int currentHealth;
     public List<GameObject> availableOrbs; 
     public GameObject equippedOrb;
     public string equippedOrbType;

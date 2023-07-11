@@ -11,6 +11,12 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             transform.GetComponent<OsloOrbs>().SpawnNewOrb(collision.gameObject.name);
         }
+
+        if (collision.gameObject.CompareTag("Heart"))
+        {
+            Destroy(collision.gameObject);
+            transform.GetComponent<OsloLife>().AddHealth(4);
+        }
     }
 
 

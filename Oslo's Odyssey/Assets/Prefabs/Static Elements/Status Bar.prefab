@@ -263,7 +263,7 @@ Transform:
   - {fileID: 2246002041214040003}
   - {fileID: 2246002040615852126}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2246002040042087459
 GameObject:
@@ -519,14 +519,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fe2370db29d4c7eb23ffb150fcf550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
+  oslo: {fileID: 0}
   currentOrbText: {fileID: 2246002040463489277}
   currentOrbImage: {fileID: 2246002040912602519}
-  oslo: {fileID: 0}
   airOrbSprite: {fileID: 21300000, guid: 0edf71fa22ff6428f9adab381c565805, type: 3}
   earthOrbSprite: {fileID: 21300000, guid: fb035ba17c4274b099dd75a2a15ea2de, type: 3}
   fireOrbSprite: {fileID: 21300000, guid: 63b30b4216b8f444084f9cffb565f29d, type: 3}
   waterOrbSprite: {fileID: 21300000, guid: e5a9abaecc8094587b818c9af0e2e4fb, type: 3}
-  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
 --- !u!1 &2246002040296124583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,18 +1277,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27815aea3781a4589950e0a2cf90daae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
+  oslo: {fileID: 0}
   availableOrbText: {fileID: 2246002040042087457}
   availableOrbImages:
   - {fileID: 2246002040661731160}
   - {fileID: 8752741666982163712}
   - {fileID: 4394435578720609039}
   - {fileID: 4206981012823818007}
-  oslo: {fileID: 0}
   airOrbSprite: {fileID: 21300000, guid: 0edf71fa22ff6428f9adab381c565805, type: 3}
   earthOrbSprite: {fileID: 21300000, guid: fb035ba17c4274b099dd75a2a15ea2de, type: 3}
   fireOrbSprite: {fileID: 21300000, guid: 63b30b4216b8f444084f9cffb565f29d, type: 3}
   waterOrbSprite: {fileID: 21300000, guid: e5a9abaecc8094587b818c9af0e2e4fb, type: 3}
-  osloData: {fileID: 11400000, guid: 64c2f8616fc1346c0a6c3e88c70c1a54, type: 2}
 --- !u!1 &2962394138140941448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,6 +1939,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 110
       objectReference: {fileID: 0}
+    - target: {fileID: 6822933730473105346, guid: 8753a8f7f28ab4d91ac5df94e24ec887, type: 3}
+      propertyPath: m_Name
+      value: Oslo Empty Hearts
+      objectReference: {fileID: 0}
     - target: {fileID: 6822933731024667040, guid: 8753a8f7f28ab4d91ac5df94e24ec887, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -2052,7 +2056,8 @@ PrefabInstance:
       value: 110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6822933731970810985, guid: 8753a8f7f28ab4d91ac5df94e24ec887, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8753a8f7f28ab4d91ac5df94e24ec887, type: 3}

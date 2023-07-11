@@ -6,8 +6,8 @@ public abstract class ObjectLife : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator anim;
-    public float startingHealth;
-    public float currentHealth;
+    public int startingHealth;
+    public int currentHealth;
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -21,7 +21,7 @@ public abstract class ObjectLife : MonoBehaviour
     //     currentHealth = startingHealth;
     // } 
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
@@ -35,6 +35,11 @@ public abstract class ObjectLife : MonoBehaviour
             // Entity dies
             Die();
         }
+    }
+
+    public void AddHealth(int health)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + health, 0, startingHealth);
     }
 
     public abstract void Hit();

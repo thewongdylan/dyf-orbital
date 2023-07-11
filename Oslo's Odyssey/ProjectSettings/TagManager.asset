@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Orb
   - Enemy
+  - Heart
   layers:
   - Default
   - TransparentFX

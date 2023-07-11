@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed7962286cf14e4daf3f5e01f21e211, type: 3}
   m_Name: Oslo Data
   m_EditorClassIdentifier: 
-  startingHealth: 5
-  currentHealth: 0
+  startingHealth: 20
+  currentHealth: 20
   availableOrbs: []
+  equippedOrb: {fileID: 0}
+  equippedOrbType: 
+  equippedOrbIndex: 0

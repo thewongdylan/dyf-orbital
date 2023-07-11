@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageTile : MonoBehaviour
 {
-    [SerializeField] private float damage = 1f;
+    [SerializeField] private int damage = 1;
     [SerializeField] private float damageInterval = 1f;
     private float timer;
     private bool isPlayerTakingDamage;
