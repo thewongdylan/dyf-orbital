@@ -127256,6 +127256,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3906618947408393615, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
+      propertyPath: position
+      value: 
+      objectReference: {fileID: 1529516215}
     - target: {fileID: 5061707359089218400, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: abilityBar
       value: 

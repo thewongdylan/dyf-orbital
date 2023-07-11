@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class LevitationAbility : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class LevitationAbility : MonoBehaviour
     public bool isLevitating = false;
     private float levitationTimer = 0f;
     private AbilityBar abilityBar;
+    [SerializeField] Transform position;
+    
 
     private void Start()
     {
@@ -60,19 +63,24 @@ public class LevitationAbility : MonoBehaviour
         }
         else 
         {
+            // jump before activating
             StartLevitation();
+            
         }
     }
 
     public void StartLevitation()
     {
+        //rb.velocity = new Vector2(rb.velocity.x, 15f);
         Debug.Log("called");
         if (abilityBar.abilityBarSlider.value >= 1f && !isLevitating)
         {
             isLevitating = true;
             rb.gravityScale = 0f;
+            StartCoroutine(MoveCharacterUp()); // jump before levitation
             levitationTimer = levitationDuration;
             Debug.Log("start levitation");
+            
 
         }
     }
@@ -94,6 +102,20 @@ public class LevitationAbility : MonoBehaviour
         {
             movementInput.Normalize();
             rb.velocity = movementInput * levitationForce;
+        }
+    }
+
+    private IEnumerator MoveCharacterUp()
+    {
+        float elapsedTime = 0f;
+        Vector2 initialPosition = transform.position;
+        Vector2 targetPosition = initialPosition + new Vector2(0, 2); // Move character 1 unit up
+
+        while (elapsedTime < 0.25f)
+        {
+            transform.position = Vector2.Lerp(initialPosition, targetPosition, elapsedTime / 0.25f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 }
