@@ -13,7 +13,6 @@ public class OsloMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 15f;
     private enum MovementState { idle, running, jumping, falling };
-
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
     private DivingAbility divingAbility;
 

@@ -39,7 +39,6 @@ public class OsloOrbs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Debug.Log("osloOrbs Start");
         levitationAbility = GetComponent<LevitationAbility>();
         orbDict = new Dictionary<string, GameObject>(){
             {"Air Orb", airOrb},
@@ -47,18 +46,14 @@ public class OsloOrbs : MonoBehaviour
             {"Fire Orb", fireOrb},
             {"Water Orb", waterOrb}
         };
-        // Debug.Log("Start: " + availableOrbs.Count + " " + equippedOrbType); 
         if (levitationAbility != null)
         {
             Debug.Log("levitation not null");
         }
-
         if (!NoOrbEquipped()) // if an orb was equipped previously, spawn it
         {
-            // Debug.Log("trying to spawn: " + equippedOrbType);
             SpawnExistingOrb(equippedOrbType);
         }
-
         abilityBar.SetActive(false);
     }
 
@@ -81,12 +76,10 @@ public class OsloOrbs : MonoBehaviour
         if (equippedOrbType == "Air Orb")
         {
             abilityBar.SetActive(true);
-            //Debug.Log("ability bar active");
         }
         else
         {
             abilityBar.SetActive(false);
-            //Debug.Log("ability bar inactive");
         }
     }
 
@@ -135,23 +128,16 @@ public class OsloOrbs : MonoBehaviour
         if (equippedOrbType == "Fire Orb")
         {
             Instantiate(fireball, shotPoint.position, Quaternion.identity);
-            equippedOrbType = null;
+            // equippedOrbType = null;
             DestroyEquippedOrb();
         }
         else if (equippedOrbType == "Water Orb")
         {
-            // Instantiate(waterOrb, shotPoint.position, Quaternion.identity);
-            // equippedOrbType = null;
-            // DestroyEquippedOrb();
             Debug.Log("Nothing should happen, water ability is passive");
         }
         else if (equippedOrbType == "Earth Orb")
         {
-            // Instantiate(earthOrb, shotPoint.position, Quaternion.identity);
-            // equippedOrbType = null;
-            // DestroyEquippedOrb();
-            Debug.Log("Nothing should happen");
-
+            Debug.Log("Nothing should happen, earth orb not implemented yet");
         }
         else if (equippedOrbType == "Air Orb")
         { 
@@ -164,7 +150,6 @@ public class OsloOrbs : MonoBehaviour
                 levitationAbility.ToggleLevitation();
                 Debug.Log("levitaton activated");
             }
-
         }
     }
 

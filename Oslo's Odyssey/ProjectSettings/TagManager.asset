@@ -7,6 +7,7 @@ TagManager:
   - Orb
   - Enemy
   - Heart
+  - OsloHead
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 4284465077
+    locked: 0
+  - name: Water
+    uniqueID: 3940567065
     locked: 0

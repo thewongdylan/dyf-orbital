@@ -33,12 +33,13 @@ public class DivingAbility : MonoBehaviour
                 // float moveVertical = Input.GetAxis("Vertical");
                 // movementInput = new Vector2(moveHorizontal, moveVertical);
                 // movementInput.Normalize();
-                // rb.gravityScale = 0f;
+                rb.gravityScale = 2f;
                 // rb.velocity = movementInput * divingForce;  
                 isDiving = true;
             }
             else
             {
+                rb.gravityScale = 5f;
                 isDiving = false;
             }   
         }
