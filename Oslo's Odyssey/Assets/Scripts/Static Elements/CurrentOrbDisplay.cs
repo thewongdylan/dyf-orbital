@@ -32,7 +32,7 @@ public class CurrentOrbDisplay : MonoBehaviour
         if (osloOrbs.NoOrbEquipped())
         {
             currentOrbImage.enabled = false;
-            currentOrbText.text = "No Orb Equipped";
+            // currentOrbText.text = "No Orb Equipped";
         }
         else
         {
@@ -47,7 +47,7 @@ public class CurrentOrbDisplay : MonoBehaviour
     {
         if (osloOrbs.NoOrbEquipped())
         {
-            currentOrbText.text = "No Orb Equipped";
+            // currentOrbText.text = "No Orb Equipped";
         }
         else
         {

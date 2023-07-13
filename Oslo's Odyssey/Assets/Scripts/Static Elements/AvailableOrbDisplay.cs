@@ -29,7 +29,6 @@ public class AvailableOrbDisplay : MonoBehaviour
             {"Water Orb", waterOrbSprite}
         };
         availableOrbs = osloData.availableOrbs;
-        // Debug.Log("availDisplay Start: " + availableOrbs.Count);
 
         foreach (Image img in availableOrbImages) // disable all images first
         {
@@ -38,7 +37,6 @@ public class AvailableOrbDisplay : MonoBehaviour
 
         if (osloOrbs.NoOrbEquipped())
         {
-            // availableOrbText.text = "No Orbs\nAvailable";
             Debug.Log("No Orbs Available");
         }
         else
@@ -51,7 +49,6 @@ public class AvailableOrbDisplay : MonoBehaviour
                 availableOrbImages[i].enabled = true;
                 availableOrbImages[i].sprite = orbImageDict[orbName];
             }
-            // Debug.Log(availableOrbs.Count + " orbs available");
         }
     }
 
@@ -61,7 +58,7 @@ public class AvailableOrbDisplay : MonoBehaviour
         availableOrbs = osloOrbs.availableOrbs;
         if (osloOrbs.NoOrbEquipped())
         {
-            availableOrbText.text = "No Orbs\nAvailable";
+            // availableOrbText.text = "No Orbs\nAvailable";
         }
         else
         {

@@ -331,9 +331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Available
-
-    Orbs'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad9b54de8319c40bda3a78d4f04af045, type: 2}
   m_sharedMaterial: {fileID: -7603937566220346541, guid: ad9b54de8319c40bda3a78d4f04af045, type: 2}
@@ -728,9 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Currently
-
-    Equipped'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad9b54de8319c40bda3a78d4f04af045, type: 2}
   m_sharedMaterial: {fileID: -7603937566220346541, guid: ad9b54de8319c40bda3a78d4f04af045, type: 2}
