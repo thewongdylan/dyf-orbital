@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelectFE.unity
     guid: 916cb4028bb4c4cd8bb6a596d46058b5
   - enabled: 1
+    path: Assets/Scenes/Earth.unity
+    guid: 2f52c814d13594eb38bb8036201bed5f
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: d4a8fa4a3f4574f75b5f31de500bf7b8
   - enabled: 1
