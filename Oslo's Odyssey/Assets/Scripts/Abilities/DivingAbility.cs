@@ -25,23 +25,15 @@ public class DivingAbility : MonoBehaviour
     void Update()
     {
         equippedOrbType = osloData.equippedOrbType;  
-        if (equippedOrbType == "Water Orb")
+        if ((WaterTile.inWater) && (equippedOrbType == "Water Orb"))
         {
-            if (WaterTile.inWater)
-            {
-                // float moveHorizontal = Input.GetAxis("Horizontal");
-                // float moveVertical = Input.GetAxis("Vertical");
-                // movementInput = new Vector2(moveHorizontal, moveVertical);
-                // movementInput.Normalize();
-                rb.gravityScale = 2f;
-                // rb.velocity = movementInput * divingForce;  
-                isDiving = true;
-            }
-            else
-            {
-                rb.gravityScale = 5f;
-                isDiving = false;
-            }   
+            rb.gravityScale = 2f;
+            isDiving = true;
         }
+        else
+        {
+            rb.gravityScale = 5f;
+            isDiving = false;
+        } 
     }
 }
