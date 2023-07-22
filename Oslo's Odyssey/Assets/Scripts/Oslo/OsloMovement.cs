@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class OsloMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private BoxCollider2D coll;
-    private Animator anim;
+    public Rigidbody2D rb;
+    public BoxCollider2D coll;
+    public Animator anim;
     [SerializeField] private LayerMask jumpableGround;
     private float dirX;
     private float dirY;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 15f;
+    public float jumpForce = 15f;
     private enum MovementState { idle, running, jumping, falling };
     private LevitationAbility levitationAbility; // Reference to the LevitationAbility script
     private DivingAbility divingAbility;
@@ -30,16 +30,21 @@ public class OsloMovement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
 
-        if ((levitationAbility != null && levitationAbility.isLevitating) ||
-            (divingAbility.isDiving))
+        if (levitationAbility != null)
         {
-            rb.velocity = new Vector2(dirX * moveSpeed, dirY * moveSpeed);
+            if ((levitationAbility.isLevitating) ||
+                (divingAbility.isDiving))
+            {
+                rb.velocity = new Vector2(dirX * moveSpeed, dirY * moveSpeed);
+            }
+            else
+            {
+                rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            }
         }
-        else
-        {
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        }
-
+            
+        
+        
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -48,7 +53,7 @@ public class OsloMovement : MonoBehaviour
         UpdateAnimationState();
     }
 
-    private void UpdateAnimationState()
+    public void UpdateAnimationState()
     {
         MovementState state;
 
@@ -67,14 +72,20 @@ public class OsloMovement : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if (rb.velocity.y > 0.1f)
+        if (rb != null)
         {
-            state = MovementState.jumping;
+            if (rb.velocity.y > 0.1f)
+            {
+                state = MovementState.jumping;
+            }
+            else if (rb.velocity.y < -0.1f)
+            {
+                state = MovementState.falling;
+            }
         }
-        else if (rb.velocity.y < -0.1f)
-        {
-            state = MovementState.falling;
-        }
+            
+        
+            
 
         anim.SetInteger("state", (int)state);
     }

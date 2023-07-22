@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
-public class NewMonoBehaviour : MonoBehaviour
+public class TextElementLinker : MonoBehaviour
 {
-    // Use this for initialization
-    void Start()
+    public Text linkedText; // Reference to the UI Text element
+
+    void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        // Automatically find the UI Text component on this GameObject if not assigned in the Inspector
+        if (linkedText == null)
+        {
+            linkedText = GetComponent<Text>();
+        }
     }
 }
