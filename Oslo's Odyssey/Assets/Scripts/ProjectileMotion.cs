@@ -19,6 +19,7 @@ public class ProjectileMotion : MonoBehaviour
         dirMovement = new Vector3(-1, 0, 0);
 
         Invoke("DestroyProjectile", lifetime);
+        
     }
 
     // Update is called once per frame
