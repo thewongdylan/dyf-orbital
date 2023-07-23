@@ -108,9 +108,11 @@ public class LevitationAbility : MonoBehaviour
         Vector2 initialPosition = transform.position;
         Vector2 targetPosition = initialPosition + new Vector2(0, 1); // Move character 1 unit up
 
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
         while (elapsedTime < 0.25f)
         {
-            transform.position = Vector2.Lerp(initialPosition, targetPosition, elapsedTime / 0.25f);
+            rb.MovePosition(Vector2.Lerp(initialPosition, targetPosition, elapsedTime / 0.25f));
             elapsedTime += Time.deltaTime;
             yield return null;
         }

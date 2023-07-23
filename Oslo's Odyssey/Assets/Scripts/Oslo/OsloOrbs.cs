@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OsloOrbs : MonoBehaviour
 {
@@ -81,6 +82,12 @@ public class OsloOrbs : MonoBehaviour
         {
             abilityBar.SetActive(false);
         }
+        if (AllOrbsPresent())
+        {
+            Debug.Log("present!");
+            SceneManager.LoadScene("Ending Cutscene");
+        }
+
     }
 
     public bool NoOrbEquipped()
@@ -173,5 +180,13 @@ public class OsloOrbs : MonoBehaviour
     public void DestroyEquippedOrb()
     {
         Destroy(equippedOrb);
+    }
+
+    public bool AllOrbsPresent()
+    {
+        return availableOrbs.Contains(airOrb) &&
+               availableOrbs.Contains(earthOrb) &&
+               availableOrbs.Contains(fireOrb) &&
+               availableOrbs.Contains(waterOrb);
     }
 }
