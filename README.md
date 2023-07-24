@@ -201,3 +201,11 @@ Metallic enemy that shoots out projectile in a fixed direction.
 <br /> Heart collectibles can heal Oslo when he is damaged.
 
 ## Save Feature
+![login](https://user-images.githubusercontent.com/90192310/255594453-eb64993d-2c3f-4355-9b21-d47a596ff540.png)
+<br /> Using the Unisave package in Unity, a basic save and load feature was implemented that allowed users to save their progress and load it.
+<br /> Data was stored in ArangoDB, Unisave's database, and allowed users to use their email as a unique ID.
+<br /> Potential future improvements would include multiple save states as well as the ability to load into a level directly when starting up the game.
+
+## Pause Menu
+![pause menu](https://user-images.githubusercontent.com/90192310/255594438-f6060223-4e82-46cf-bb83-0746103eb33b.png)
+<br /> A pause menu was implemented in playable levels (not cutscenes) to allow players to pause, resume, save, and load their game.
