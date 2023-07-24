@@ -1,6 +1,7 @@
 # Oslo's Odyssey
 Welcome to our game development log/README.
-<br /> Click [here](https://play.unity.com/mg/other/webgl-builds-355406) for a working prototye of our game!
+<br /> Click [here](https://play.unity.com/p/oslo-s-odyssey-ms3/edit) for a working prototye of our game!
+<br /> MS2 working prototype can be found [here](https://tinyurl.com/OslosOdyssey)
 
 ## Table of Contents
 README
