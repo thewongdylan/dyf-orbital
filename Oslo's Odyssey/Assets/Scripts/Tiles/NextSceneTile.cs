@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NextSceneTile : MonoBehaviour
 {
     // private bool levelCompleted = false;
     [SerializeField] private float loadDelay = 0f;
-
+    [SerializeField] private Button saveButton;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) //&& levelCompleted == false)
@@ -20,5 +21,6 @@ public class NextSceneTile : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        saveButton.onClick.Invoke();
     }
 }

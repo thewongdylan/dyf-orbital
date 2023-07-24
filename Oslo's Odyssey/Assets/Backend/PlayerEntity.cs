@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unisave;
 using Unisave.Entities;
 using Unisave.Facades;
+using UnityEngine;
 
 /*
  * This entity represents a player of your game. To learn how to add
@@ -15,19 +16,14 @@ using Unisave.Facades;
 
 public class PlayerEntity : Entity
 {
-    // Add authentication via email:
-    // https://unisave.cloud/docs/email-authentication
-    //
-    //      public string email;
-    //      public string password;
-    //      public DateTime lastLoginAt = DateTime.UtcNow;
-    //
-
-    // Add custom fields to the entity:
-    //
-    //      public string nickname;
-    //      public int coins = 1_000;
-    //      public DateTime premiumUntil = DateTime.UtcNow;
-    //      public DateTime bannedUntil = DateTime.UtcNow;
-    //
+    public string playerToken;
+    public DateTime lastLoginAt = DateTime.UtcNow;
+    public DateTime lastSeenAt;
+    [Fillable] public int startingHealth;
+    [Fillable] public int currentHealth;
+    [Fillable] public string equippedOrbType;
+    [Fillable] public int equippedOrbIndex;
+    [Fillable] public int savedSceneIndex;
+    [Fillable] public List<string> startingAvailableOrbs = new List<string>();
+    [Fillable] public string startingEquippedOrbType;
 }

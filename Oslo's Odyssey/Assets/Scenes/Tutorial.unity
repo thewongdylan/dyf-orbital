@@ -56793,7 +56793,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: textToDisplay
-      value: Press ESC to pause the game
+      value: Press P or ESC to pause the game
       objectReference: {fileID: 0}
     - target: {fileID: 2297120149290605459, guid: 6ec5a4c26d148435696a350ee13a8a90, type: 3}
       propertyPath: instructionText

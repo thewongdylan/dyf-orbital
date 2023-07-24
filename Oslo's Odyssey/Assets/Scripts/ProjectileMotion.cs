@@ -6,6 +6,7 @@ public class ProjectileMotion : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Vector3 dirMovement;
+    public string shotDir;
     public float speed = 10f;
     public int damage;
     public float lifetime = 2f;
@@ -16,8 +17,14 @@ public class ProjectileMotion : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();  
         oslo = GameObject.Find("Oslo");
-        dirMovement = new Vector3(-1, 0, 0);
-
+        if (shotDir == "left")
+        {
+            dirMovement = new Vector3(-1,0,0);
+        }
+        else if (shotDir == "right")
+        {
+            dirMovement = new Vector3(1,0,0);
+        }
         Invoke("DestroyProjectile", lifetime);
         
     }
@@ -35,6 +42,18 @@ public class ProjectileMotion : MonoBehaviour
             transform.localScale = new Vector3(-1,1,1);
         }
     }
+
+    // public void SpawnProjectile(string shotDir)
+    // {
+    //     if (shotDir == "left")
+    //     {
+    //         dirMovement = new Vector3(1,1,1);
+    //     }
+    //     else if (shotDir == "right")
+    //     {
+    //         dirMovement = new Vector3(-1,1,1);
+    //     }
+    // }
 
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -120,12 +120,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f0c469c38894e0687bb751e93bf860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  rb: {fileID: 0}
+  dirMovement: {x: 0, y: 0, z: 0}
+  shotDir: 
+  speed: 7
   damage: 1
   lifetime: 2
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  oslo: {fileID: 0}
 --- !u!61 &2000830095814163102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,6 +137,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

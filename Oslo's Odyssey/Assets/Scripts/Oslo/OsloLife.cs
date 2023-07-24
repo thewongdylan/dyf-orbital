@@ -17,7 +17,6 @@ public class OsloLife : ObjectLife
     private void Update()
     {
         osloData.currentHealth = currentHealth;
-        osloData.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     public override void Hit()
@@ -31,6 +30,7 @@ public class OsloLife : ObjectLife
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death"); // death animation
         transform.GetComponent<OsloOrbs>().DestroyEquippedOrb();
+        osloData.deathSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void GameOver()

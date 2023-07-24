@@ -150,10 +150,10 @@ GameObject:
   - component: {fileID: 1868002797217740969}
   - component: {fileID: 1868002797217740968}
   - component: {fileID: 1868002797217740971}
-  - component: {fileID: 1868002797217740970}
   - component: {fileID: 1868002797217740981}
   - component: {fileID: 1868002797217740974}
   - component: {fileID: 1868002797217740975}
+  - component: {fileID: 3112997525726597819}
   m_Layer: 7
   m_Name: Golem
   m_TagString: Enemy
@@ -176,7 +176,7 @@ Transform:
   - {fileID: 1868002796863419406}
   - {fileID: 1868002797971524586}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1868002797217740969
 SpriteRenderer:
@@ -296,22 +296,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1868002797217740970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868002797217740983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f363f03fa1f5c49a8bc576b3ceaa9201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 2
 --- !u!114 &1868002797217740981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +354,22 @@ MonoBehaviour:
   shotPoint: {fileID: 1868002797971524586}
   projectile: {fileID: 3938066846823650081, guid: 1cc206c605e94458bae0b4859289e2b7, type: 3}
   shotInterval: 2
+  shotDir: left
+--- !u!114 &3112997525726597819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868002797217740983}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f363f03fa1f5c49a8bc576b3ceaa9201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  speed: 3
 --- !u!1 &1868002797253724252
 GameObject:
   m_ObjectHideFlags: 0

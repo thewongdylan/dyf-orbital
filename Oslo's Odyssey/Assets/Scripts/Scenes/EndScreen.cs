@@ -13,7 +13,7 @@ public class EndScreen : MonoBehaviour
 
     public void Continue()
     {
-        SceneManager.LoadScene(osloData.lastSceneIndex);
+        SceneManager.LoadScene(osloData.deathSceneIndex);
         osloData.currentHealth = osloData.startingHealth;
     }
 

@@ -165,14 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3bfa8821c42417d906d9cda8ff424a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  dirMovement: {x: 0, y: 0, z: 0}
+  shotDir: left
   speed: 5
   damage: 1
   lifetime: 2
-  enemy: {fileID: 3827196237167864007, guid: aa79e9e7a6fca49a6927f7547e439887, type: 3}
   oslo: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  dirMovement: {x: 0, y: 0, z: 0}
-  sprite: {fileID: 0}
-  rb: {fileID: 0}

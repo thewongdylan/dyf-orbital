@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867235369710059264, guid: aa79e9e7a6fca49a6927f7547e439887, type: 3}
       propertyPath: shotDir
-      value: right
+      value: left
       objectReference: {fileID: 0}
     - target: {fileID: 4867235369710059264, guid: aa79e9e7a6fca49a6927f7547e439887, type: 3}
       propertyPath: shotInterval
@@ -126985,6 +126985,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4867235369710059264, guid: aa79e9e7a6fca49a6927f7547e439887, type: 3}
+      propertyPath: shotDir
+      value: left
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867235369710059264, guid: aa79e9e7a6fca49a6927f7547e439887, type: 3}
       propertyPath: shotInterval
       value: 3
       objectReference: {fileID: 0}
@@ -127261,6 +127265,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1529516215}
     - target: {fileID: 5061707359089218400, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061707359089218400, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: abilityBar
       value: 
       objectReference: {fileID: 793115369}
@@ -127290,11 +127298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061707359089218415, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.492
+      value: -15.655
       objectReference: {fileID: 0}
     - target: {fileID: 5061707359089218415, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.558
+      value: -1.556
       objectReference: {fileID: 0}
     - target: {fileID: 5061707359089218415, guid: c4b7cd2e85bcc4d27b88869dd231b9d5, type: 3}
       propertyPath: m_LocalPosition.z
