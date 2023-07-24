@@ -19,6 +19,7 @@ public class TwoImageCutsceneController : MonoBehaviour
     {
         imageDisplay = GetComponent<Image>();
         ShowImageAndText(currentIndex);
+        Time.timeScale = 1f;
     }
 
     void Update()

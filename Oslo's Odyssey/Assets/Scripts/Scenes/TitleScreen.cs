@@ -18,13 +18,17 @@ public class TitleScreen : MonoBehaviour
 
     public void StartButtonPress()
     {
+        Debug.Log("start button pressed");
         StartCoroutine(OsloAnimation());
     }
 
     public IEnumerator OsloAnimation()
     {
+        Time.timeScale = 1f;
+        Debug.Log("oslo starting to move");
         while (oslo.transform.position != osloEndpoint.position)
         {
+            Debug.Log("oslo moving");
             oslo.transform.position = Vector3.MoveTowards(
                 oslo.transform.position, 
                 osloEndpoint.position, 
@@ -32,5 +36,6 @@ public class TitleScreen : MonoBehaviour
             yield return 0;
             anim.SetInteger("state", 1); // running animation
         }
+        Debug.Log("oslo moved to endpoint");
     }
 }

@@ -5,6 +5,8 @@ using Unisave.Facades;
 using Unisave.Serialization;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using TMPro;
+using System.Linq;
 
 namespace SaveFunctions
     {
@@ -13,6 +15,8 @@ namespace SaveFunctions
         public PlayerEntity player = null;
         [SerializeField] private OsloData osloData;
         private OsloOrbs osloOrbs;
+        [SerializeField] private TextMeshProUGUI saveStatus;
+        // private bool loadedOnce = false;
         void Start()
         {
             osloOrbs = GameObject.Find("Oslo").GetComponent<OsloOrbs>();
@@ -51,13 +55,18 @@ namespace SaveFunctions
                 .Done();
 
             Debug.Log("player saved: " + Serializer.ToJsonString(this.player));
-            
         }
 
-        // void OnDisable()
-        // {
-        //     this.SavePlayer();
-        // }
+        public void Update()
+        {
+            if (this.player.savedSceneIndex == 0) {
+                saveStatus.text = "No level saved";
+            }
+            else 
+            {
+                saveStatus.text = "Level saved: " + osloData.levelPlayedDict.ElementAt(this.player.savedSceneIndex).Key;
+            }
+        }
 
         public void LoadPlayer()
         {
@@ -99,6 +108,8 @@ namespace SaveFunctions
             }
             // osloData.equippedOrbType = this.player.startingEquippedOrbType;
 
+            Time.timeScale = 1f;
+            Time.timeScale = 0f;
             Time.timeScale = 1f;
             Debug.Log("player loaded: " + Serializer.ToJsonString(this.player));
             // LoadPlayer();
